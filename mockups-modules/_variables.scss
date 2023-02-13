@@ -1,0 +1,49 @@
+/* Mixins */
+@mixin setUpPosition(
+    $toBeCenteredInX: false,
+    $toBeCenteredInY: false,
+    $top: initial,
+    $left: initial,
+    $right: initial,
+    $bottom: initial
+    ) {
+
+    position: absolute;
+
+    @if $toBeCenteredInX {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    @if $toBeCenteredInY {
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    @else {
+        top: $top;
+        left: $left;
+        right: $right;
+        bottom: $bottom;
+    }
+
+}
+
+/* Fonts Backups */
+$titles: 'modern-aristocrat', 'Helvetica', 'sans-serif';
+$descriptions: 'made-tommy', 'Arial', 'sans-serif';
+
+/* main colors palette */
+$darkest-forest-green: #1A2601;
+$forest-green: #5A7302;
+$brighter-forest-green: #A9BF04;
+$pale-forest-green: #93A603;
+$new-white: #F2F2F2;
+$dark-mode-black: #131313;
+
+/* complementary colors palette */
+$brighter-chicken-yellow: #f2e205;
+$normal-chicken-yellow: #F2CB05;
+$juice-orange: #F29F05;
+$darkest-juice-orange: #D97904;
+$brown: #110800;
