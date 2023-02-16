@@ -85,7 +85,7 @@ body {
 .header_content__txt_vignets {
   font-size: 1rem;
   text-align: center;
-  font-family: "made-tommy", "Arial", "sans-serif";
+  font-family: "Raleway", "Arial", "sans-serif";
 }
 
 /* Encabezado de la presentación de mis proyectos y stack de tecnologías. */
@@ -102,7 +102,7 @@ body {
   display: block;
   width: 3.5rem;
   height: 3.5rem;
-  background: #aac6e6;
+  background: #1A2601;
   filter: opacity(0.5);
   -webkit-clip-path: polygon(50% 100%, 0% 47%, 0 20%, 15% 0, 35% 0, 50% 15%, 65% 0, 85% 0, 100% 20%, 100% 47%);
           clip-path: polygon(50% 100%, 0% 47%, 0 20%, 15% 0, 35% 0, 50% 15%, 65% 0, 85% 0, 100% 20%, 100% 47%);
@@ -114,7 +114,7 @@ body {
   display: block;
   width: 3.5rem;
   height: 3.5rem;
-  background: #aac6e6;
+  background: #1A2601;
   filter: opacity(0.5);
   -webkit-clip-path: polygon(50% 100%, 0% 47%, 0 20%, 15% 0, 35% 0, 50% 15%, 65% 0, 85% 0, 100% 20%, 100% 47%);
           clip-path: polygon(50% 100%, 0% 47%, 0 20%, 15% 0, 35% 0, 50% 15%, 65% 0, 85% 0, 100% 20%, 100% 47%);
@@ -130,10 +130,27 @@ body {
 /* Responsive GRID para presentar mi stack de tecnologías dominadas y en aprendizaje */
 /* Contenedor GRID */
 .stack_panel {
-  width: 100vw;
+  max-width: 75vw;
   min-height: 190px;
-  height: 35rem;
+  height: 25rem;
   max-height: 40rem;
   list-style: none;
+  padding: 20px;
+  margin: 10px auto;
+  background: #110800;
+  border-radius: 15px;
   display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  gap: 5px;
+}
+.stack_panel__tech {
+  background: #e2e2e2;
+  border-radius: 50%;
+  height: 85%;
+  text-align: center;
+  font-size: 2rem;
+}
+.stack_panel__tech > i {
+  transform: translateY(50%);
 }/*# sourceMappingURL=styles.css.map */

@@ -1,4 +1,4 @@
-@import '_variables.scss';
+@import '_variables.scss', '_maps.scss';
 
 @font-face {
     font-family: 'modern-aristocrat';
@@ -111,7 +111,7 @@ body {
     display: block;
     width: 3.5rem;
     height: 3.5rem;
-    background: #aac6e6;
+    background: $darkest-forest-green;
     filter: opacity(.5);
     clip-path: polygon(50% 100%, 0% 47%, 0 20%, 15% 0, 35% 0, 50% 15%, 65% 0, 85% 0, 100% 20%, 100% 47%);
 }
@@ -122,7 +122,7 @@ body {
     display: block;
     width: 3.5rem;
     height: 3.5rem;
-    background: #aac6e6;
+    background: $darkest-forest-green;
     filter: opacity(.5);
     clip-path: polygon(50% 100%, 0% 47%, 0 20%, 15% 0, 35% 0, 50% 15%, 65% 0, 85% 0, 100% 20%, 100% 47%);
 }
@@ -138,10 +138,32 @@ body {
     
 /* Contenedor GRID */
 .stack_panel {
-    width: 100vw;
+    max-width: 75vw;
     min-height: 190px;
-    height: 35rem;
+    height: 25rem;
     max-height: 40rem;
     list-style: none;
+    padding: 20px;
+    margin: 10px auto;
+    background: $brown /*linear-gradient(to bottom, $brighter-forest-green, $pale-forest-green)*/;
+    border-radius: 15px;
     display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 5px;
+
+    &__tech {
+        background: #e2e2e2;
+        border-radius: 50%;
+        height: 85%;
+        text-align: center;
+
+        & > i {
+            transform: translateY(50%);
+        }
+
+        font-size: 2rem;
+    }
+
+    
 }
