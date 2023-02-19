@@ -1,22 +1,5 @@
-@import '_variables.scss', '_maps.scss';
+@import '_variables.scss', '_maps.scss', '_functions.scss';
 
-@font-face {
-    font-family: 'modern-aristocrat';
-    src: url('./fonts/modern_aristocrat-webfont.woff2') format('woff2'),
-         url('./fonts/modern_aristocrat-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-
-}
-
-@font-face {
-    font-family: 'made-tommy';
-    src: url('./fonts/made_tommy_regular_outline_personal_use-webfont.woff2') format('woff2'),
-         url('./fonts/made_tommy_regular_outline_personal_use-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-
-}
 
 html:root {
     font-size: 16px;
@@ -43,31 +26,34 @@ body {
         }
 
     background: $brown;
-    border-radius: 20px;
+    border-radius: 15px;
     margin: 16px auto;
+    position: absolute;
+    @include centryElementHorizontally
 }
 
 /* Encabezado principal */
 .home_header {
-    border: .1rem dashed black;
     display: flex;
-    flex-direction: row wrap;
+    flex-flow: row wrap;
     align-items: center;
     justify-content: space-around;
     max-width: 100vw;
     min-height: 20rem;
-}
-
-.home_header__svg_element {
-    border: .1rem dashed black;
-    min-width: 9rem;
-    width: 15%;
-    min-height: 9rem;
-    height: 50%;
+    background: linear-gradient(45deg, $pale-forest-green, $brighter-forest-green, $forest-green);
 }
 
 .home_header__profile_img {
-    border: .1rem dashed black;
+    border: .5rem double $new-white;
+    border-radius: 50%;
+    width: 8rem;
+    height: 8rem;
+}
+
+#prf-img {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
 }
 
 .header_content {
@@ -79,7 +65,7 @@ body {
     align-items: center;
 
     &__title {
-        font-size: 1.7rem;
+        font-size: 1.5rem;
         font-family: $titles;
         margin-bottom: 5px;
     }
@@ -90,9 +76,30 @@ body {
     }
 
     &__txt_vignets {
-        font-size: 1rem;
+        font-size: .75rem;
         text-align: center;
         font-family: $descriptions;
+        max-width: 80%;
+    }
+
+    &__stage_dotts {
+	    list-style: none;
+	    width: 40%;
+        max-width: 7rem;
+	    align-self: center;
+        justify-content: space-around;
+	    display: inline-flex;
+	    height: 1rem;
+	    margin: 0;
+	    padding: 0;
+
+        &__dott {
+	    height: 80%;
+	    flex-basis: 12%;
+	    background: $brown;
+	    border: 1px double $new-white;
+	    border-radius: 50%;
+        }
     }
 }
 
@@ -100,7 +107,7 @@ body {
 /* Encabezado de la presentación de mis proyectos y stack de tecnologías. */
 .discovering_zone_title {
     text-align: center;
-    font-size: 1.7rem;
+    font-size: 1.5rem;
     font-family: $titles;
 }
 
@@ -111,19 +118,17 @@ body {
     display: block;
     width: 3.5rem;
     height: 3.5rem;
-    background: $darkest-forest-green;
-    filter: opacity(.5);
+    background: $brighter-forest-green;
     clip-path: polygon(50% 100%, 0% 47%, 0 20%, 15% 0, 35% 0, 50% 15%, 65% 0, 85% 0, 100% 20%, 100% 47%);
 }
 
 .discovering_zone_title::after {
-    transform:translateX(calc(95vw - 5rem));
+    transform:translateX(calc(95vw - 3.5rem));
     content: '';
     display: block;
     width: 3.5rem;
     height: 3.5rem;
-    background: $darkest-forest-green;
-    filter: opacity(.5);
+    background: $brighter-forest-green;
     clip-path: polygon(50% 100%, 0% 47%, 0 20%, 15% 0, 35% 0, 50% 15%, 65% 0, 85% 0, 100% 20%, 100% 47%);
 }
 
@@ -145,7 +150,7 @@ body {
     list-style: none;
     padding: 20px;
     margin: 10px auto;
-    background: $brown /*linear-gradient(to bottom, $brighter-forest-green, $pale-forest-green)*/;
+    background: $brown;
     border-radius: 15px;
     display: grid;
     grid-template-columns: repeat(5, 1fr);

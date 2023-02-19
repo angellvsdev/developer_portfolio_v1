@@ -1,5 +1,4 @@
 @charset "UTF-8";
-/* Mixins */
 /* Fonts Backups */
 /* main colors palette */
 /* complementary colors palette */
@@ -32,8 +31,11 @@ body {
   width: 12.5rem;
   height: 2.5rem;
   background: #110800;
-  border-radius: 20px;
+  border-radius: 15px;
   margin: 16px auto;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
 }
 .landing_menu__option {
   font-size: 1.2rem;
@@ -44,25 +46,26 @@ body {
 
 /* Encabezado principal */
 .home_header {
-  border: 0.1rem dashed black;
   display: flex;
-  flex-direction: row wrap;
+  flex-flow: row wrap;
   align-items: center;
   justify-content: space-around;
   max-width: 100vw;
   min-height: 20rem;
-}
-
-.home_header__svg_element {
-  border: 0.1rem dashed black;
-  min-width: 9rem;
-  width: 15%;
-  min-height: 9rem;
-  height: 50%;
+  background: linear-gradient(45deg, #93A603, #A9BF04, #5A7302);
 }
 
 .home_header__profile_img {
-  border: 0.1rem dashed black;
+  border: 0.5rem double #F2F2F2;
+  border-radius: 50%;
+  width: 8rem;
+  height: 8rem;
+}
+
+#prf-img {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
 }
 
 .header_content {
@@ -74,7 +77,7 @@ body {
   align-items: center;
 }
 .header_content__title {
-  font-size: 1.7rem;
+  font-size: 1.5rem;
   font-family: "modern-aristocrat", "Helvetica", "sans-serif";
   margin-bottom: 5px;
 }
@@ -83,15 +86,34 @@ body {
   font-family: "modern-aristocrat", "Helvetica", "sans-serif";
 }
 .header_content__txt_vignets {
-  font-size: 1rem;
+  font-size: 0.75rem;
   text-align: center;
   font-family: "Raleway", "Arial", "sans-serif";
+  max-width: 80%;
+}
+.header_content__stage_dotts {
+  list-style: none;
+  width: 40%;
+  max-width: 7rem;
+  align-self: center;
+  justify-content: space-around;
+  display: inline-flex;
+  height: 1rem;
+  margin: 0;
+  padding: 0;
+}
+.header_content__stage_dotts__dott {
+  height: 80%;
+  flex-basis: 12%;
+  background: #110800;
+  border: 1px double #F2F2F2;
+  border-radius: 50%;
 }
 
 /* Encabezado de la presentación de mis proyectos y stack de tecnologías. */
 .discovering_zone_title {
   text-align: center;
-  font-size: 1.7rem;
+  font-size: 1.5rem;
   font-family: "modern-aristocrat", "Helvetica", "sans-serif";
 }
 
@@ -102,20 +124,18 @@ body {
   display: block;
   width: 3.5rem;
   height: 3.5rem;
-  background: #1A2601;
-  filter: opacity(0.5);
+  background: #A9BF04;
   -webkit-clip-path: polygon(50% 100%, 0% 47%, 0 20%, 15% 0, 35% 0, 50% 15%, 65% 0, 85% 0, 100% 20%, 100% 47%);
           clip-path: polygon(50% 100%, 0% 47%, 0 20%, 15% 0, 35% 0, 50% 15%, 65% 0, 85% 0, 100% 20%, 100% 47%);
 }
 
 .discovering_zone_title::after {
-  transform: translateX(calc(95vw - 5rem));
+  transform: translateX(calc(95vw - 3.5rem));
   content: "";
   display: block;
   width: 3.5rem;
   height: 3.5rem;
-  background: #1A2601;
-  filter: opacity(0.5);
+  background: #A9BF04;
   -webkit-clip-path: polygon(50% 100%, 0% 47%, 0 20%, 15% 0, 35% 0, 50% 15%, 65% 0, 85% 0, 100% 20%, 100% 47%);
           clip-path: polygon(50% 100%, 0% 47%, 0 20%, 15% 0, 35% 0, 50% 15%, 65% 0, 85% 0, 100% 20%, 100% 47%);
 }
