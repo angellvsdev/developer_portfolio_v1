@@ -1,8 +1,8 @@
-/* Fonts Backups */
+/* Fuentes */
 $titles: 'modern-aristocrat', 'Helvetica', 'sans-serif';
 $descriptions: 'Raleway', 'Arial', 'sans-serif';
 
-/* main colors palette */
+/* Paleta de colores principal */
 $darkest-forest-green: #1A2601;
 $forest-green: #5A7302;
 $brighter-forest-green: #A9BF04;
@@ -10,14 +10,14 @@ $pale-forest-green: #93A603;
 $new-white: #F2F2F2;
 $dark-mode-black: #131313;
 
-/* complementary colors palette */
+/* Paleta de colores complementarios */
 $brighter-chicken-yellow: #f2e205;
 $normal-chicken-yellow: #F2CB05;
 $juice-orange: #F29F05;
 $darkest-juice-orange: #D97904;
 $brown: #110800;
 
-
+/* Instalación de fuentes personalizadas */
 @font-face {
     font-family: 'modern-aristocrat';
     src: url('./fonts/modern_aristocrat-webfont.woff2') format('woff2'),
@@ -27,7 +27,7 @@ $brown: #110800;
 
 }
 
-@font-face {
+@font-face { // Recuerda reemplazar esta fuente por una más acorde y legible, esta está fea
     font-family: 'made-tommy';
     src: url('./fonts/made_tommy_regular_outline_personal_use-webfont.woff2') format('woff2'),
          url('./fonts/made_tommy_regular_outline_personal_use-webfont.woff') format('woff');
