@@ -2,6 +2,7 @@
 /* Fuentes */
 /* Paleta de colores principal */
 /* Paleta de colores complementarios */
+/* Bordes */
 /* Instalación de fuentes personalizadas */
 @font-face {
   font-family: "modern-aristocrat";
@@ -27,7 +28,7 @@ body {
 .landing_menu {
   align-items: center;
   background: #110800;
-  border-radius: 15px;
+  border-radius: 10px;
   display: flex;
   flex-direction: row;
   height: 2.5rem;
@@ -81,6 +82,7 @@ body {
 .header_content__title {
   font-family: "modern-aristocrat", "Helvetica", "sans-serif";
   font-size: 1.5rem;
+  font-weight: 800;
   margin-bottom: 5px;
 }
 .header_content__title_plate {
@@ -153,7 +155,7 @@ body {
 /* Contenedor GRID */
 .stack_panel {
   background: #110800;
-  border-radius: 15px;
+  border-radius: 10px;
   display: grid;
   gap: 5px;
   grid-template-columns: repeat(5, 1fr);
@@ -171,8 +173,33 @@ body {
   border-radius: 50%;
   font-size: 2rem;
   height: 85%;
+  position: relative;
   text-align: center;
 }
 .stack_panel__tech > i {
   transform: translateY(50%);
+}
+
+.tech_tooltip {
+  height: 5rem;
+  left: 100%;
+  position: absolute;
+  top: 2%;
+  width: 9.5rem;
+  background: #c6c6c6;
+  border-radius: 10px;
+  z-index: 10;
+}
+
+.stack_panel__tech:hover > .tech_tooltip {
+  display: block;
+}
+
+.tech_tooltip::before {
+  content: " ";
+  width: 1rem;
+  height: 1rem;
+  display: block;
+  background: #c6c6c6;
+  transform: rotateZ(45deg) translate(50%, 100%);
 }/*# sourceMappingURL=styles.css.map */

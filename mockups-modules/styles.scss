@@ -13,7 +13,7 @@ body {
 .landing_menu {
     align-items: center;
     background: $brown;
-    border-radius: 15px;
+    border-radius: $main-border;
     display: flex;
     flex-direction: row;
     height: 2.5rem;
@@ -66,6 +66,7 @@ body {
     &__title {
         font-family: $titles;
         font-size: 1.5rem;
+        font-weight: 800;
         margin-bottom: 5px;
     }
 
@@ -143,7 +144,7 @@ body {
 /* Contenedor GRID */
 .stack_panel {
     background: $brown;
-    border-radius: 15px;
+    border-radius: $main-border;
     display: grid;
     gap: 5px;
     grid-template-columns: repeat(5, 1fr);
@@ -161,10 +162,36 @@ body {
         border-radius: 50%;
         font-size: 2rem;
         height: 85%;
+        position: relative;
         text-align: center;
         
         & > i {
             transform: translateY(50%);
         }
     }
+}
+
+.tech_tooltip {
+    //display: none;
+	height: 5rem;
+	left: 100%;
+	position: absolute;
+	top: 2%;
+	width: 9.5rem;
+	background: #c6c6c6;
+    border-radius: $main-border;
+	z-index: 10;
+}
+
+.stack_panel__tech:hover > .tech_tooltip {
+    display: block;
+}
+
+.tech_tooltip::before {
+	content: " ";
+	width: 1rem;
+	height: 1rem;
+	display: block;
+	background: #c6c6c6;
+	transform: rotateZ(45deg) translate(50%, 100%);
 }
