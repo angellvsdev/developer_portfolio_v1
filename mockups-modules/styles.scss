@@ -14,6 +14,7 @@ body {
     align-items: center;
     background: $brown;
     border-radius: $main-border;
+    box-shadow: $main-shadow;
     display: flex;
     flex-direction: row;
     height: 2.5rem;
@@ -23,11 +24,14 @@ body {
     width: 12.5rem;
     
         &__option {
-                     background: none;
-                     border: none;
-                     color: $new-white;
-                     font-size: 1.2rem;
-                 }
+             background: none;
+             border: none;
+             font-size: 1.2rem;
+             
+             & a {
+              color: $new-white;
+          }
+         }
     @include centryElementHorizontally
 }
 
@@ -46,12 +50,12 @@ body {
     border-radius: 50%;
     border: .5rem double $new-white;
     height: 8rem;
+    overflow: hidden;
     width: 8rem;
 }
 
 #prf-img {
     height: 100%;
-    overflow: hidden;
     width: 100%;
 }
 
@@ -79,6 +83,7 @@ body {
         font-family: $descriptions;
         font-size: .75rem;
         max-width: 80%;
+        overflow: hidden;
         text-align: center;
     }
 
@@ -94,15 +99,17 @@ body {
         width: 40%;
         
         &__dott {
-        background: $brown;
         border-radius: 50%;
-        border: 1px double $new-white;
+        border: 1px double $brown;
         flex-basis: 12%;
         height: 80%;
     }
     }
 }
 
+.dott-active {
+  background: $brown;
+}
 
 /* Encabezado de la presentación de mis proyectos y stack de tecnologías. */
 .discovering_zone_title {
@@ -145,6 +152,7 @@ body {
 .stack_panel {
     background: $brown;
     border-radius: $main-border;
+    box-shadow: $main-shadow;
     display: grid;
     gap: 5px;
     grid-template-columns: repeat(5, 1fr);
@@ -160,38 +168,366 @@ body {
     &__tech {
         background: #e2e2e2;
         border-radius: 50%;
+        color: $darkest-forest-green;
         font-size: 2rem;
         height: 85%;
         position: relative;
         text-align: center;
         
         & > i {
-            transform: translateY(50%);
+            transform: translateY(calc(50% - .3rem));
         }
     }
 }
 
-.tech_tooltip {
-    //display: none;
-	height: 5rem;
-	left: 100%;
-	position: absolute;
-	top: 2%;
-	width: 9.5rem;
-	background: #c6c6c6;
+/* Flex-container para representar mi mejor proyecto como programador */
+
+/* Contenedor padre */
+.fav_project_presentation {
+    display: flex;
+    flex-flow: column wrap;
+    height: 40 rem;
+    margin: auto;
+    width: 90vw;
+}
+
+.fav_project_presentation__header {
+    font-family: $titles;
+    font-size: 1.5rem;
+    margin-top: 60px;
+    text-align: center;
+}
+
+.fav_project_presentation__container {
     border-radius: $main-border;
-	z-index: 10;
+    box-shadow: $main-shadow;
+    display: flex;
+    flex-direction: column;
+    height: 85%;
+    justify-content: center;
+    padding: 10px;
 }
 
-.stack_panel__tech:hover > .tech_tooltip {
-    display: block;
+.container__photo {
+    align-self: center;
+    border-radius: $main-border;
+    box-shadow: $main-shadow;
+    height: 19rem;
+    margin-top: 10px;
+    object-fit: cover;
+    width: 95%;
+    
+    //
 }
 
-.tech_tooltip::before {
-	content: " ";
-	width: 1rem;
-	height: 1rem;
-	display: block;
-	background: #c6c6c6;
-	transform: rotateZ(45deg) translate(50%, 100%);
+.container__project_data {
+    padding: 10px;
+}
+
+.project_data__name {
+    font-family: $titles;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.project_data__description {
+    font-family: $descriptions;
+    font-size: 1rem;
+    max-height: 12rem;
+    overflow: hidden;
+    position: relative;
+}
+
+.vanish_txt {
+    background: linear-gradient(to top, $new-white,transparent);
+    height: 10rem;
+    position: absolute;
+    transform: translateY(-10rem);
+    width: 100%;
+}
+
+.project_data__view_more_opt {
+    background: $brown;
+    border-radius: $main-border;
+    border: none;
+    color: $new-white;
+    font-family: $descriptions;
+    height: 2.45rem;
+    margin-top: 10px;
+    width: 9rem;
+}
+
+.project_data__used_tech_stack {
+    display: flex;
+    height: 4rem;
+    list-style: none;
+    margin-top: 18px;
+    padding: 0;
+    width: 90%;
+}
+
+.used_tech_stack__icon_el {
+    align-items: center;
+    border-radius: 50%;
+    box-shadow: $main-shadow;
+    display: flex;
+    flex-basis: 4rem;
+    justify-content: center;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    
+    & > i {
+        align-self: center;
+        font-size: 2rem;
+        text-align: center;
+    }
+}
+
+.contact_section_title {
+  font-family: $titles;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  margin-top: 45px;
+  margin: auto;
+  text-align: center;
+}
+
+.contact_section_description {
+  font-family: $descriptions;
+  font-size: .75rem;
+  margin: auto;
+  text-align: center;
+  width: 80vw;
+}
+
+*, *:before, *:after {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+}
+
+.background {
+  display: flex;
+  min-height: 85vh;
+}
+
+.container {
+  flex: 0 1 700px;
+  margin: auto;
+  padding: 10px;
+}
+
+.screen {
+  background: linear-gradient(45deg, $pale-forest-green, $brighter-forest-green, $forest-green);
+  border-radius: 15px;
+  position: relative;
+}
+
+.screen:after {
+  border-radius: 15px;
+  bottom: 0;
+  box-shadow: $main-shadow;
+  content: '';
+  display: block;
+  left: 20px;
+  position: absolute;
+  right: 20px;
+  top: 0;
+  z-index: -1;
+}
+
+.screen-header {
+  align-items: center;
+  background: #dedede;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  display: flex;
+  padding: 10px 20px;
+}
+
+.screen-header-left {
+  margin-right: auto;
+}
+
+.screen-header-button {
+  background: white;
+  border-radius: 8px;
+  display: inline-block;
+  height: 8px;
+  margin-right: 3px;
+  width: 8px;
+}
+
+.screen-header-button.close {
+  background: #ed1c6f;
+}
+
+.screen-header-button.maximize {
+  background: #e8e925;
+}
+
+.screen-header-button.minimize {
+  background: #74c54f;
+}
+
+.screen-header-right {
+  display: flex;
+}
+
+.screen-header-ellipsis {
+  background: #999;
+  border-radius: 8px;
+  height: 3px;
+  margin-left: 2px;
+  width: 3px;
+}
+
+.screen-body {
+  display: flex;
+}
+
+.screen-body-item {
+  flex: 1;
+  font-family: $descriptions;
+  padding: 50px;
+}
+
+.screen-body-item.left {
+  display: flex;
+  flex-direction: column;
+}
+
+.app-title {
+  color: $brown;
+  display: flex;
+  flex-direction: column;
+  font-family: $titles;
+  font-size: 26px;
+  position: relative;
+}
+
+.app-title:after {
+  background: $brown;
+  bottom: -10px;
+  content: '';
+  display: block;
+  height: 4px;
+  left: 0;
+  position: absolute;
+  width: 25px;
+}
+
+.app-contact {
+  color: $forest-green;
+  font-size: .7rem;
+  margin-top: auto;
+}
+
+.app-form-group {
+  margin-bottom: 15px;
+}
+
+.app-form-group.message {
+  margin-top: 40px;
+}
+
+.app-form-group.buttons {
+  margin-bottom: 0;
+  text-align: right;
+}
+
+.app-form-control {
+  background: none;
+  border-bottom: 1px solid $brown;
+  border: none;
+  color: #ddd;
+  font-size: 14px;
+  outline: none;
+  padding: 10px 0;
+  text-transform: uppercase;
+  transition: border-color .2s;
+  width: 100%;
+}
+
+.app-form-control::placeholder {
+  color: $forest-green;
+}
+
+.app-form-control:focus {
+  border-bottom-color: #ddd;
+}
+
+.app-form-button {
+  background: $brown;
+  background: none;
+  border-radius: $main-border;
+  border: none;
+  color: $new-white;
+  cursor: pointer;
+  font-size: 14px;
+  outline: none;
+  padding: 15px;
+}
+
+.app-form-button:hover {
+  color: $brighter-forest-green;
+}
+
+@media screen and (max-width: 520px) {
+  app-title:after {
+    display: none;
+  }
+    .screen-body {
+      flex-direction: column;
+  }
+
+    .screen-body-item.left {
+      margin-bottom: 30px;
+  }
+
+    .app-title {
+      flex-direction: row;
+  }
+
+    .app-title span {
+      margin-right: 12px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  
+  .screen-body {
+    padding: 40px;
+}
+
+  .screen-body-item {
+    padding: 0;
+}
+}
+
+/*Footer de la página */
+.homepage_footer {
+    align-items: center;
+    background: linear-gradient(45deg, $pale-forest-green, $brighter-forest-green, $forest-green);
+    color: $new-white;
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+}
+
+.homepage_footer__legend {
+  font-family: $titles;
+  font-size: .80rem;
+  padding-top: .7rem;
+}
+
+.contact_links {
+    display: flex;
+    font-size: 3rem;
+    padding: 35px;
+    
+  &__site {
+    color: $new-white;
+    padding: 0.9rem;
+  }
 }

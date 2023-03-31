@@ -3,6 +3,7 @@
 /* Paleta de colores principal */
 /* Paleta de colores complementarios */
 /* Bordes */
+/* Sombras */
 /* Instalación de fuentes personalizadas */
 @font-face {
   font-family: "modern-aristocrat";
@@ -29,6 +30,7 @@ body {
   align-items: center;
   background: #110800;
   border-radius: 10px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
   display: flex;
   flex-direction: row;
   height: 2.5rem;
@@ -43,8 +45,10 @@ body {
 .landing_menu__option {
   background: none;
   border: none;
-  color: #F2F2F2;
   font-size: 1.2rem;
+}
+.landing_menu__option a {
+  color: #F2F2F2;
 }
 
 /* Encabezado principal */
@@ -62,12 +66,12 @@ body {
   border-radius: 50%;
   border: 0.5rem double #F2F2F2;
   height: 8rem;
+  overflow: hidden;
   width: 8rem;
 }
 
 #prf-img {
   height: 100%;
-  overflow: hidden;
   width: 100%;
 }
 
@@ -93,6 +97,7 @@ body {
   font-family: "Raleway", "Arial", "sans-serif";
   font-size: 0.75rem;
   max-width: 80%;
+  overflow: hidden;
   text-align: center;
 }
 .header_content__stage_dotts {
@@ -107,11 +112,14 @@ body {
   width: 40%;
 }
 .header_content__stage_dotts__dott {
-  background: #110800;
   border-radius: 50%;
-  border: 1px double #F2F2F2;
+  border: 1px double #110800;
   flex-basis: 12%;
   height: 80%;
+}
+
+.dott-active {
+  background: #110800;
 }
 
 /* Encabezado de la presentación de mis proyectos y stack de tecnologías. */
@@ -156,6 +164,7 @@ body {
 .stack_panel {
   background: #110800;
   border-radius: 10px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
   display: grid;
   gap: 5px;
   grid-template-columns: repeat(5, 1fr);
@@ -171,35 +180,357 @@ body {
 .stack_panel__tech {
   background: #e2e2e2;
   border-radius: 50%;
+  color: #1A2601;
   font-size: 2rem;
   height: 85%;
   position: relative;
   text-align: center;
 }
 .stack_panel__tech > i {
-  transform: translateY(50%);
+  transform: translateY(calc(50% - 0.3rem));
 }
 
-.tech_tooltip {
-  height: 5rem;
-  left: 100%;
-  position: absolute;
-  top: 2%;
-  width: 9.5rem;
-  background: #c6c6c6;
+/* Flex-container para representar mi mejor proyecto como programador */
+/* Contenedor padre */
+.fav_project_presentation {
+  display: flex;
+  flex-flow: column wrap;
+  height: 40 rem;
+  margin: auto;
+  width: 90vw;
+}
+
+.fav_project_presentation__header {
+  font-family: "modern-aristocrat", "Helvetica", "sans-serif";
+  font-size: 1.5rem;
+  margin-top: 60px;
+  text-align: center;
+}
+
+.fav_project_presentation__container {
   border-radius: 10px;
-  z-index: 10;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  height: 85%;
+  justify-content: center;
+  padding: 10px;
 }
 
-.stack_panel__tech:hover > .tech_tooltip {
-  display: block;
+.container__photo {
+  align-self: center;
+  border-radius: 10px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  height: 19rem;
+  margin-top: 10px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 95%;
 }
 
-.tech_tooltip::before {
-  content: " ";
-  width: 1rem;
-  height: 1rem;
+.container__project_data {
+  padding: 10px;
+}
+
+.project_data__name {
+  font-family: "modern-aristocrat", "Helvetica", "sans-serif";
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.project_data__description {
+  font-family: "Raleway", "Arial", "sans-serif";
+  font-size: 1rem;
+  max-height: 12rem;
+  overflow: hidden;
+  position: relative;
+}
+
+.vanish_txt {
+  background: linear-gradient(to top, #F2F2F2, transparent);
+  height: 10rem;
+  position: absolute;
+  transform: translateY(-10rem);
+  width: 100%;
+}
+
+.project_data__view_more_opt {
+  background: #110800;
+  border-radius: 10px;
+  border: none;
+  color: #F2F2F2;
+  font-family: "Raleway", "Arial", "sans-serif";
+  height: 2.45rem;
+  margin-top: 10px;
+  width: 9rem;
+}
+
+.project_data__used_tech_stack {
+  display: flex;
+  height: 4rem;
+  list-style: none;
+  margin-top: 18px;
+  padding: 0;
+  width: 90%;
+}
+
+.used_tech_stack__icon_el {
+  align-items: center;
+  border-radius: 50%;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-basis: 4rem;
+  justify-content: center;
+  overflow-x: scroll;
+  overflow-y: hidden;
+}
+.used_tech_stack__icon_el > i {
+  align-self: center;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.contact_section_title {
+  font-family: "modern-aristocrat", "Helvetica", "sans-serif";
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  margin-top: 45px;
+  margin: auto;
+  text-align: center;
+}
+
+.contact_section_description {
+  font-family: "Raleway", "Arial", "sans-serif";
+  font-size: 0.75rem;
+  margin: auto;
+  text-align: center;
+  width: 80vw;
+}
+
+*, *:before, *:after {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+}
+
+.background {
+  display: flex;
+  min-height: 85vh;
+}
+
+.container {
+  flex: 0 1 700px;
+  margin: auto;
+  padding: 10px;
+}
+
+.screen {
+  background: linear-gradient(45deg, #93A603, #A9BF04, #5A7302);
+  border-radius: 15px;
+  position: relative;
+}
+
+.screen:after {
+  border-radius: 15px;
+  bottom: 0;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  content: "";
   display: block;
-  background: #c6c6c6;
-  transform: rotateZ(45deg) translate(50%, 100%);
+  left: 20px;
+  position: absolute;
+  right: 20px;
+  top: 0;
+  z-index: -1;
+}
+
+.screen-header {
+  align-items: center;
+  background: #dedede;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  display: flex;
+  padding: 10px 20px;
+}
+
+.screen-header-left {
+  margin-right: auto;
+}
+
+.screen-header-button {
+  background: white;
+  border-radius: 8px;
+  display: inline-block;
+  height: 8px;
+  margin-right: 3px;
+  width: 8px;
+}
+
+.screen-header-button.close {
+  background: #ed1c6f;
+}
+
+.screen-header-button.maximize {
+  background: #e8e925;
+}
+
+.screen-header-button.minimize {
+  background: #74c54f;
+}
+
+.screen-header-right {
+  display: flex;
+}
+
+.screen-header-ellipsis {
+  background: #999;
+  border-radius: 8px;
+  height: 3px;
+  margin-left: 2px;
+  width: 3px;
+}
+
+.screen-body {
+  display: flex;
+}
+
+.screen-body-item {
+  flex: 1;
+  font-family: "Raleway", "Arial", "sans-serif";
+  padding: 50px;
+}
+
+.screen-body-item.left {
+  display: flex;
+  flex-direction: column;
+}
+
+.app-title {
+  color: #110800;
+  display: flex;
+  flex-direction: column;
+  font-family: "modern-aristocrat", "Helvetica", "sans-serif";
+  font-size: 26px;
+  position: relative;
+}
+
+.app-title:after {
+  background: #110800;
+  bottom: -10px;
+  content: "";
+  display: block;
+  height: 4px;
+  left: 0;
+  position: absolute;
+  width: 25px;
+}
+
+.app-contact {
+  color: #5A7302;
+  font-size: 0.7rem;
+  margin-top: auto;
+}
+
+.app-form-group {
+  margin-bottom: 15px;
+}
+
+.app-form-group.message {
+  margin-top: 40px;
+}
+
+.app-form-group.buttons {
+  margin-bottom: 0;
+  text-align: right;
+}
+
+.app-form-control {
+  background: none;
+  border-bottom: 1px solid #110800;
+  border: none;
+  color: #ddd;
+  font-size: 14px;
+  outline: none;
+  padding: 10px 0;
+  text-transform: uppercase;
+  transition: border-color 0.2s;
+  width: 100%;
+}
+
+.app-form-control::-moz-placeholder {
+  color: #5A7302;
+}
+
+.app-form-control::placeholder {
+  color: #5A7302;
+}
+
+.app-form-control:focus {
+  border-bottom-color: #ddd;
+}
+
+.app-form-button {
+  background: #110800;
+  background: none;
+  border-radius: 10px;
+  border: none;
+  color: #F2F2F2;
+  cursor: pointer;
+  font-size: 14px;
+  outline: none;
+  padding: 15px;
+}
+
+.app-form-button:hover {
+  color: #A9BF04;
+}
+
+@media screen and (max-width: 520px) {
+  app-title:after {
+    display: none;
+  }
+  .screen-body {
+    flex-direction: column;
+  }
+  .screen-body-item.left {
+    margin-bottom: 30px;
+  }
+  .app-title {
+    flex-direction: row;
+  }
+  .app-title span {
+    margin-right: 12px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .screen-body {
+    padding: 40px;
+  }
+  .screen-body-item {
+    padding: 0;
+  }
+}
+/*Footer de la página */
+.homepage_footer {
+  align-items: center;
+  background: linear-gradient(45deg, #93A603, #A9BF04, #5A7302);
+  color: #F2F2F2;
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+}
+
+.homepage_footer__legend {
+  font-family: "modern-aristocrat", "Helvetica", "sans-serif";
+  font-size: 0.8rem;
+  padding-top: 0.7rem;
+}
+
+.contact_links {
+  display: flex;
+  font-size: 3rem;
+  padding: 35px;
+}
+.contact_links__site {
+  color: #F2F2F2;
+  padding: 0.9rem;
 }/*# sourceMappingURL=styles.css.map */
