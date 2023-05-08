@@ -5,44 +5,45 @@ html:root {
 }
 
 body {
-    display: flex;
     background: $new-white;
-    min-width: 100vw;
-    min-height: 100vh;
+    display: flex;
     flex-flow: column wrap;
+    min-height: 100vh;
+    min-width: 100vw;
 }
 
 .main_menu_container {
     align-self: center;
     width: 100%;
-
+    margin-top: 10px;
+    
     .pl_menu {
-        list-style: none;
-        padding-left: 0;
-        min-width: 6rem;
-        max-width: 11rem;
-        min-height: 2rem;
-        display: flex;
-        justify-content: space-around;
         background: $brown;
         border-radius: $main-border;
         box-shadow: $main-shadow;
-        margin: auto;
+        display: flex;
+        justify-content: space-around;
+        list-style: none;
         margin-top: 15px;
-
+        margin: auto;
+        max-width: 11rem;
+        min-height: 2rem;
+        min-width: 6rem;
+        padding-left: 0;
+        
         &_opt {
-            display: flex;
             align-items: center;
+            display: flex;
             flex-basis: 2rem;
-            min-width: 2rem;
             justify-content: center;
-
+            min-width: 2rem;
+            
             .opt_button {
-                flex-basis: 50%;
-                min-height: 50%;
+                background: #FFF;
                 border-radius: 50%;
                 border-style: none;
-                background: #FFF;
+                flex-basis: 50%;
+                min-height: 50%;
             }
         }
     }
@@ -50,44 +51,46 @@ body {
 
 .media_menu_container {
     align-self: center;
+    
 
     .project_media_list {
         display: flex;
-        list-style: none;
-        padding: 0;
-        min-width: 10rem;
         height: 1.5rem;
         justify-content: center;
-
+        list-style: none;
+        min-width: 10rem;
+        padding: 0;
+        
         .media_el {
             height: 100%;
             margin-top: 0;
-
+            
             &__opt_button {
-                height: 100%;
-                min-width: 1.5rem;
-                box-shadow: $main-shadow;
-                border: 2px solid #FFF;
-                border-radius: 3px;
                 background: $pale-forest-green;
+                border-radius: 3px;
+                border: 2px solid #FFF;
+                box-shadow: $main-shadow;
+                height: 100%;
                 margin: 0 2px;
+                min-width: 1.5rem;
             }
         }
     }
 }
 
 .mv_container {
-    height: 45vh;
     display: flex;
+    height: 45vh;
     justify-content: center;
-
+    
     &__img_container {
         min-height: 80%;
+        
 
         .footage {
+            height: 100%;
             object-fit: contain;
             width: 100%;
-            height: 100%;
         }
     }
 }
@@ -97,6 +100,7 @@ body {
     gap: 5px;
     height: 50vh;
     width: 100vw;
+    color: $new-white;
     
     grid-template-areas: 
      "pname pname"
@@ -115,10 +119,14 @@ body {
     }
 
     & > * {
+        align-content: center;
+        align-items: center;
         align-self: center;
         background: rgb(216, 209, 209);
         border-radius: $main-border;
+        display: flex;
         height: 95%;
+        justify-content: center;
         justify-self: center;
         margin: 5px 5px;
         width: 97%;
@@ -126,10 +134,10 @@ body {
 }
 
 .project_name {
-    align-items: center;
-    display: flex;
     grid-area: pname;
-    justify-content: center;
+    font-family: $titles;
+    background: $green-gradient;
+    padding: 15px;
 }
 
 .project_desc {
@@ -137,28 +145,40 @@ body {
     grid-area: pdesc;
     overflow: scroll;
     text-align: center;
+    font-family: $descriptions;
+    background: $green-gradient;
+    padding: 10px;
 }
 
 .techs_used {
-    align-items: center;
-    align-self: center;
-    display: flex;
     font-size: 3rem;
     grid-area: techstack;
-    justify-content: center;
     overflow-x: scroll;
     overflow-y: hidden;
+    background: $green-gradient;
+    padding: 5px
 }
 
 .completion_time {
-    align-self: center;
     font-size: 1rem;
     grid-area: deadline;
-    justify-self: center;
-    text-align: center;
+    font-family: $descriptions;
+    background: $green-gradient;
+    padding: 10px;
 }
 
 .project_menu {
     grid-area: pmenu;
-    justify-self: center;
+    justify-content: space-around;
+    display: flex;
+    background: $green-gradient;
+    
+    &__option {
+        flex-grow: 1;
+        margin: 0 5px;
+        height: 4rem;
+        border-radius: $main-border;
+        font-family: $descriptions;
+        background: $new-white;
+    }
 }
