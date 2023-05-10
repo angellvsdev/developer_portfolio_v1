@@ -94,7 +94,7 @@ body {
   font-size: 1rem;
 }
 .header_content__txt_vignets {
-  font-family: "Raleway", "Arial", "sans-serif";
+  font-family: "Raleway", "Arial";
   font-size: 0.75rem;
   max-width: 80%;
   overflow: hidden;
@@ -239,7 +239,7 @@ body {
 }
 
 .project_data__description {
-  font-family: "Raleway", "Arial", "sans-serif";
+  font-family: "Raleway", "Arial";
   font-size: 1rem;
   max-height: 12rem;
   overflow: hidden;
@@ -259,7 +259,7 @@ body {
   border-radius: 10px;
   border: none;
   color: #F2F2F2;
-  font-family: "Raleway", "Arial", "sans-serif";
+  font-family: "Raleway", "Arial";
   height: 2.45rem;
   margin-top: 10px;
   width: 9rem;
@@ -300,7 +300,7 @@ body {
 }
 
 .contact_section_description {
-  font-family: "Raleway", "Arial", "sans-serif";
+  font-family: "Raleway", "Arial";
   font-size: 0.75rem;
   margin: auto;
   text-align: center;
@@ -395,7 +395,7 @@ body {
 
 .screen-body-item {
   flex: 1;
-  font-family: "Raleway", "Arial", "sans-serif";
+  font-family: "Raleway", "Arial";
   padding: 50px;
 }
 

@@ -95,12 +95,14 @@ body {
 }
 .mv_container__img_container {
   min-height: 80%;
+  width: 85%;
 }
 .mv_container__img_container .footage {
   height: 100%;
   -o-object-fit: contain;
      object-fit: contain;
   width: 100%;
+  filter: drop-shadow(10px 10px 10px rgba(39, 39, 39, 0.934));
 }
 
 .project_specs_container {
@@ -133,50 +135,55 @@ body {
 }
 
 .project_name {
-  grid-area: pname;
-  font-family: "modern-aristocrat", "Helvetica", "sans-serif";
   background: linear-gradient(45deg, #93A603, #A9BF04, #5A7302);
+  font-family: "modern-aristocrat", "Helvetica", "sans-serif";
+  grid-area: pname;
   padding: 15px;
 }
 
 .project_desc {
+  background: linear-gradient(45deg, #93A603, #A9BF04, #5A7302);
+  font-family: "Raleway", "Arial";
   font-size: 1rem;
   grid-area: pdesc;
   overflow: scroll;
-  text-align: center;
-  font-family: "Raleway", "Arial", "sans-serif";
-  background: linear-gradient(45deg, #93A603, #A9BF04, #5A7302);
   padding: 10px;
+  text-align: center;
 }
 
 .techs_used {
+  background: linear-gradient(45deg, #93A603, #A9BF04, #5A7302);
   font-size: 3rem;
   grid-area: techstack;
   overflow-x: scroll;
   overflow-y: hidden;
-  background: linear-gradient(45deg, #93A603, #A9BF04, #5A7302);
   padding: 5px;
 }
 
 .completion_time {
+  background: linear-gradient(45deg, #93A603, #A9BF04, #5A7302);
+  font-family: "Raleway", "Arial";
   font-size: 1rem;
   grid-area: deadline;
-  font-family: "Raleway", "Arial", "sans-serif";
-  background: linear-gradient(45deg, #93A603, #A9BF04, #5A7302);
   padding: 10px;
 }
 
 .project_menu {
+  background: linear-gradient(45deg, #93A603, #A9BF04, #5A7302);
+  display: flex;
   grid-area: pmenu;
   justify-content: space-around;
-  display: flex;
-  background: linear-gradient(45deg, #93A603, #A9BF04, #5A7302);
 }
 .project_menu__option {
-  flex-grow: 1;
-  margin: 0 5px;
-  height: 4rem;
+  align-items: center;
+  background: #110800;
   border-radius: 10px;
-  font-family: "Raleway", "Arial", "sans-serif";
-  background: #F2F2F2;
+  color: #F2F2F2;
+  display: flex;
+  flex-grow: 1;
+  font-family: "Raleway", "Arial";
+  font-size: 2rem;
+  height: 4rem;
+  justify-content: center;
+  margin: 0 5px;
 }/*# sourceMappingURL=jobs.css.map */

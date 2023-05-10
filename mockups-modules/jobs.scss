@@ -85,12 +85,13 @@ body {
     
     &__img_container {
         min-height: 80%;
-        
+        width: 85%;
 
         .footage {
             height: 100%;
             object-fit: contain;
             width: 100%;
+            filter: drop-shadow(10px 10px 10px rgba(39, 39, 39, 0.934));
         }
     }
 }
@@ -134,51 +135,56 @@ body {
 }
 
 .project_name {
-    grid-area: pname;
-    font-family: $titles;
     background: $green-gradient;
+    font-family: $titles;
+    grid-area: pname;
     padding: 15px;
 }
 
 .project_desc {
+    background: $green-gradient;
+    font-family: $descriptions;
     font-size: 1rem;
     grid-area: pdesc;
     overflow: scroll;
-    text-align: center;
-    font-family: $descriptions;
-    background: $green-gradient;
     padding: 10px;
+    text-align: center;
 }
 
 .techs_used {
+    background: $green-gradient;
     font-size: 3rem;
     grid-area: techstack;
     overflow-x: scroll;
     overflow-y: hidden;
-    background: $green-gradient;
     padding: 5px
 }
 
 .completion_time {
+    background: $green-gradient;
+    font-family: $descriptions;
     font-size: 1rem;
     grid-area: deadline;
-    font-family: $descriptions;
-    background: $green-gradient;
     padding: 10px;
 }
 
 .project_menu {
+    background: $green-gradient;
+    display: flex;
     grid-area: pmenu;
     justify-content: space-around;
-    display: flex;
-    background: $green-gradient;
     
     &__option {
-        flex-grow: 1;
-        margin: 0 5px;
-        height: 4rem;
+        align-items: center;
+        background: $brown;
         border-radius: $main-border;
+        color: $new-white;
+        display: flex;
+        flex-grow: 1;
         font-family: $descriptions;
-        background: $new-white;
+        font-size: 2rem;
+        height: 4rem;
+        justify-content: center;
+        margin: 0 5px;
     }
 }
