@@ -1,0 +1,41 @@
+@import "_variables.scss";
+
+body {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.general_profile {
+    width: 100vw;
+    height: 100vh;
+    background: $new-white;
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+}
+
+.soft_skills {
+    width: 100vw;
+    height: 75vh;
+    background: $green-gradient;
+}
+
+.technical_skills {
+    width: 100vw;
+    height: 75vh;
+    background: $brown;
+}
+
+.about_me_adjustment {
+    border-radius: 50%;
+    border: .5rem double $new-white;
+    height: 14rem;
+    overflow: hidden;
+    width: 14rem;
+    background: $forest-green;   
+}
+
+#prf-img {
+    height: 100%;
+    width: 100%;
+}
