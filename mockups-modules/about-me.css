@@ -1,1 +1,124 @@
-/*# sourceMappingURL=about-me.css.map */
+@charset "UTF-8";
+/* Fuentes */
+/* Paleta de colores principal */
+/* Gradientes */
+/* Paleta de colores complementarios */
+/* Bordes */
+/* Sombras */
+/* Instalación de fuentes personalizadas */
+@font-face {
+  font-family: "modern-aristocrat";
+  src: url("./fonts/modern_aristocrat-webfont.woff2") format("woff2"), url("./fonts/modern_aristocrat-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "made-tommy";
+  src: url("./fonts/made_tommy_regular_outline_personal_use-webfont.woff2") format("woff2"), url("./fonts/made_tommy_regular_outline_personal_use-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+body {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.general_profile {
+  width: 100vw;
+  height: 100vh;
+  background: #F2F2F2;
+  display: flex;
+  justify-content: center;
+  flex-flow: column wrap;
+}
+
+.soft_skills {
+  width: 100vw;
+  height: 75vh;
+  background: #110800;
+  color: #F2F2F2;
+}
+
+.technical_skills {
+  width: 100vw;
+  height: 75vh;
+  background: linear-gradient(45deg, #93A603, #A9BF04, #5A7302);
+  color: #110800;
+}
+
+.about_me_adjustment {
+  border-radius: 50%;
+  border: 0.5rem double #F2F2F2;
+  height: 14rem;
+  overflow: hidden;
+  width: 14rem;
+  background: #5A7302;
+  align-self: center;
+}
+
+#prf-img {
+  height: 100%;
+  width: 100%;
+}
+
+.dev {
+  align-self: center;
+}
+
+.dev__name {
+  font-size: 1.5rem;
+  text-align: center;
+  font-family: "modern-aristocrat", "Helvetica", "sans-serif";
+}
+
+.dev__plate {
+  text-align: center;
+  font-family: "modern-aristocrat", "Helvetica", "sans-serif";
+}
+
+.data__dev_description {
+  text-align: center;
+  font-family: "Raleway", "Arial";
+  overflow: scroll;
+}
+
+.contact_links {
+  display: flex;
+  padding: 20px;
+  justify-content: center;
+}
+.contact_links__site {
+  color: #110800;
+  padding: 0.9rem;
+  font-size: 3rem;
+  text-align: center;
+}
+
+.soft_skills, .technical_skills {
+  display: flex;
+  flex-direction: column;
+  font-family: "modern-aristocrat", "Helvetica", "sans-serif";
+}
+.soft_skills__flag, .technical_skills__flag {
+  align-self: center;
+  text-align: center;
+  padding-top: 15px;
+  font-size: 1.8rem;
+}
+.soft_skills__flag__legend, .technical_skills__flag__legend {
+  text-align: center;
+}
+.soft_skills__flag i, .technical_skills__flag i {
+  padding-top: 30px;
+  font-size: 6rem;
+}
+.soft_skills__legend, .technical_skills__legend {
+  padding: 0 15px 0 15px;
+  font-family: "Raleway", "Arial";
+  font-size: 1.1rem;
+}
+.soft_skills__list, .technical_skills__list {
+  padding-left: 15px;
+  list-style: none;
+  font-family: "Raleway", "Arial";
+}/*# sourceMappingURL=about-me.css.map */

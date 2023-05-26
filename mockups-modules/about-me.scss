@@ -1,0 +1,112 @@
+@import "_variables.scss";
+
+body {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.general_profile {
+    width: 100vw;
+    height: 100vh;
+    background: $new-white;
+    display: flex;
+    justify-content: center;
+    flex-flow: column wrap;
+}
+
+.soft_skills {
+    width: 100vw;
+    height: 75vh;
+    background: $brown;
+    color: $new-white;
+}
+
+.technical_skills {
+    width: 100vw;
+    height: 75vh;
+    background: $green-gradient;
+    color: $brown;
+}
+
+.about_me_adjustment {
+    border-radius: 50%;
+    border: .5rem double $new-white;
+    height: 14rem;
+    overflow: hidden;
+    width: 14rem;
+    background: $forest-green;   
+    align-self: center;
+}
+
+#prf-img {
+    height: 100%;
+    width: 100%;
+}
+
+.dev {
+    align-self: center;
+}
+
+.dev__name {
+    font-size: 1.5rem;
+    text-align: center;
+    font-family: $titles;
+}
+
+.dev__plate {
+    text-align: center;
+    font-family: $titles;
+}
+
+.data__dev_description {
+    text-align: center;
+    font-family: $descriptions;
+    overflow: scroll;
+}
+
+.contact_links {
+    display: flex;
+    padding: 20px;
+    justify-content: center;
+    
+  &__site {
+    color: $brown;
+    padding: 0.9rem;
+    font-size: 3rem;
+    text-align: center;
+  }
+}
+
+.soft_skills, .technical_skills {
+    display: flex;
+    flex-direction: column;
+    font-family: $titles;
+
+        &__flag {
+            align-self: center;
+            text-align: center;
+            padding-top: 15px;
+            font-size: 1.8rem;
+            
+            &__legend {
+                text-align: center;
+            }
+
+            i {
+                padding-top: 30px;
+                font-size: 6rem;
+            }
+        }
+
+        &__legend {
+            padding: 0 15px 0 15px;
+            font-family: $descriptions;
+            font-size: 1.1rem;
+        }
+
+        &__list {
+            padding-left: 15px;
+            list-style: none;
+            font-family: $descriptions;
+        }
+}
