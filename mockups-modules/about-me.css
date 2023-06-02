@@ -23,6 +23,31 @@ body {
   flex-flow: row wrap;
 }
 
+.landing_menu {
+  align-items: center;
+  background: #110800;
+  border-radius: 10px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: row;
+  height: 2.5rem;
+  justify-content: space-around;
+  margin: 16px auto;
+  position: absolute;
+  width: 12.5rem;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.landing_menu__option {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+}
+.landing_menu__option a {
+  color: #F2F2F2;
+}
+
 .general_profile {
   width: 100vw;
   height: 100vh;
@@ -54,11 +79,14 @@ body {
   width: 14rem;
   background: #5A7302;
   align-self: center;
+  margin-top: 85px;
 }
 
 #prf-img {
   height: 100%;
   width: 100%;
+  -o-object-fit: fill;
+     object-fit: fill;
 }
 
 .dev {
@@ -121,4 +149,9 @@ body {
   padding-left: 15px;
   list-style: none;
   font-family: "Raleway", "Arial";
+}
+
+#html5-symbol {
+  color: #d8460d;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
 }/*# sourceMappingURL=about-me.css.map */

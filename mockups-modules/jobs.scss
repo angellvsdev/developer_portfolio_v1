@@ -12,6 +12,30 @@ body {
     min-width: 100vw;
 }
 
+
+.landing_menu {
+    align-items: center;
+    background: $brown;
+    border-radius: $main-border;
+    box-shadow: $main-shadow;
+    display: flex;
+    flex-direction: row;
+    height: 2.5rem;
+    justify-content: space-around;
+    margin: 10px auto 10px;
+    width: 12.5rem;
+    
+        &__option {
+             background: none;
+             border: none;
+             font-size: 1.2rem;
+             
+             & a {
+              color: $new-white;
+          }
+         }
+}
+
 .main_menu_container {
     align-self: center;
     width: 100%;
@@ -82,6 +106,7 @@ body {
     display: flex;
     height: 45vh;
     justify-content: center;
+    margin-bottom: 50px;
     
     &__img_container {
         min-height: 80%;
@@ -99,7 +124,7 @@ body {
 .project_specs_container {
     display: grid;
     gap: 5px;
-    height: 50vh;
+    min-height: 50vh;
     width: 100vw;
     color: $new-white;
     
@@ -149,6 +174,7 @@ body {
     overflow: scroll;
     padding: 10px;
     text-align: center;
+    max-height: 13rem;
 }
 
 .techs_used {

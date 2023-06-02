@@ -30,6 +30,27 @@ body {
   min-width: 100vw;
 }
 
+.landing_menu {
+  align-items: center;
+  background: #110800;
+  border-radius: 10px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: row;
+  height: 2.5rem;
+  justify-content: space-around;
+  margin: 10px auto 10px;
+  width: 12.5rem;
+}
+.landing_menu__option {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+}
+.landing_menu__option a {
+  color: #F2F2F2;
+}
+
 .main_menu_container {
   align-self: center;
   width: 100%;
@@ -93,6 +114,7 @@ body {
   display: flex;
   height: 45vh;
   justify-content: center;
+  margin-bottom: 50px;
 }
 .mv_container__img_container {
   min-height: 80%;
@@ -109,7 +131,7 @@ body {
 .project_specs_container {
   display: grid;
   gap: 5px;
-  height: 50vh;
+  min-height: 50vh;
   width: 100vw;
   color: #F2F2F2;
   grid-template-areas: "pname pname" "pdesc pdesc" "techstack techstack" "deadline deadline" "pmenu pmenu";
@@ -150,6 +172,7 @@ body {
   overflow: scroll;
   padding: 10px;
   text-align: center;
+  max-height: 13rem;
 }
 
 .techs_used {

@@ -1,8 +1,33 @@
-@import "_variables.scss";
+@import "_variables.scss", '_funcs-and-components.scss';
 
 body {
     display: flex;
     flex-flow: row wrap;
+}
+
+.landing_menu {
+    align-items: center;
+    background: $brown;
+    border-radius: $main-border;
+    box-shadow: $main-shadow;
+    display: flex;
+    flex-direction: row;
+    height: 2.5rem;
+    justify-content: space-around;
+    margin: 16px auto;
+    position: absolute;
+    width: 12.5rem;
+    
+        &__option {
+             background: none;
+             border: none;
+             font-size: 1.2rem;
+             
+             & a {
+              color: $new-white;
+          }
+         }
+    @include centryElementHorizontally
 }
 
 .general_profile {
@@ -36,11 +61,13 @@ body {
     width: 14rem;
     background: $forest-green;   
     align-self: center;
+    margin-top: 85px;
 }
 
 #prf-img {
     height: 100%;
     width: 100%;
+    object-fit: fill;
 }
 
 .dev {
@@ -109,4 +136,9 @@ body {
             list-style: none;
             font-family: $descriptions;
         }
+}
+
+#html5-symbol {
+    color: #d8460d;
+    box-shadow: $main-shadow;
 }
