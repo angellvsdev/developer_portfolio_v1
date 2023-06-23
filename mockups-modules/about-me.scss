@@ -75,7 +75,7 @@ body {
 }
 
 .dev__name {
-    font-size: 1.5rem;
+    font-size: $titles-size;
     text-align: center;
     font-family: $titles;
 }
@@ -83,11 +83,13 @@ body {
 .dev__plate {
     text-align: center;
     font-family: $titles;
+    font-size: calc($titles-size - .5rem);
 }
 
 .data__dev_description {
     text-align: center;
     font-family: $descriptions;
+    font-size: $desc-size;
     overflow: scroll;
 }
 
@@ -108,15 +110,16 @@ body {
     display: flex;
     flex-direction: column;
     font-family: $titles;
+    font-size: 2.5rem;
 
         &__flag {
             align-self: center;
             text-align: center;
             padding-top: 15px;
-            font-size: 1.8rem;
             
             &__legend {
                 text-align: center;
+                font-size: 2.8rem;
             }
 
             i {
@@ -128,17 +131,51 @@ body {
         &__legend {
             padding: 0 15px 0 15px;
             font-family: $descriptions;
-            font-size: 1.1rem;
+            font-size: $desc-size;
         }
 
         &__list {
             padding-left: 15px;
             list-style: none;
             font-family: $descriptions;
+            font-size: $desc-size;
         }
 }
 
 #html5-symbol {
     color: #d8460d;
     box-shadow: $main-shadow;
+}
+
+@media screen and (min-width: 1280px) {
+    html:root {
+        font-size: 17px;
+    }
+
+    .data__dev_description,
+    .technical_skills__legend, .technical_skills__list,
+    .soft_skills__legend, .soft_skills__list {
+        padding: 0 40px;
+    }
+
+    .landing_menu {
+        height: 4rem;
+        width: 17.5rem;
+        
+        &__option {
+            font-size: 1.5rem;
+        }
+    }
+}
+
+@media screen and (min-width: 1440px) { 
+    html:root {
+        font-size: 19px;
+    }    
+}
+
+@media screen and (min-width: 1920px) {
+    html:root {
+        font-size: 22px;
+    }
 }

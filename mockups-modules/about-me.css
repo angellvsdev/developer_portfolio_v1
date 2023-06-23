@@ -94,7 +94,7 @@ body {
 }
 
 .dev__name {
-  font-size: 1.5rem;
+  font-size: 1.85rem;
   text-align: center;
   font-family: "modern-aristocrat", "Helvetica", "sans-serif";
 }
@@ -102,11 +102,13 @@ body {
 .dev__plate {
   text-align: center;
   font-family: "modern-aristocrat", "Helvetica", "sans-serif";
+  font-size: 1.35rem;
 }
 
 .data__dev_description {
   text-align: center;
   font-family: "Raleway", "Arial";
+  font-size: 1.5rem;
   overflow: scroll;
 }
 
@@ -126,15 +128,16 @@ body {
   display: flex;
   flex-direction: column;
   font-family: "modern-aristocrat", "Helvetica", "sans-serif";
+  font-size: 2.5rem;
 }
 .soft_skills__flag, .technical_skills__flag {
   align-self: center;
   text-align: center;
   padding-top: 15px;
-  font-size: 1.8rem;
 }
 .soft_skills__flag__legend, .technical_skills__flag__legend {
   text-align: center;
+  font-size: 2.8rem;
 }
 .soft_skills__flag i, .technical_skills__flag i {
   padding-top: 30px;
@@ -143,15 +146,44 @@ body {
 .soft_skills__legend, .technical_skills__legend {
   padding: 0 15px 0 15px;
   font-family: "Raleway", "Arial";
-  font-size: 1.1rem;
+  font-size: 1.5rem;
 }
 .soft_skills__list, .technical_skills__list {
   padding-left: 15px;
   list-style: none;
   font-family: "Raleway", "Arial";
+  font-size: 1.5rem;
 }
 
 #html5-symbol {
   color: #d8460d;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+@media screen and (min-width: 1280px) {
+  html:root {
+    font-size: 17px;
+  }
+  .data__dev_description,
+  .technical_skills__legend, .technical_skills__list,
+  .soft_skills__legend, .soft_skills__list {
+    padding: 0 40px;
+  }
+  .landing_menu {
+    height: 4rem;
+    width: 17.5rem;
+  }
+  .landing_menu__option {
+    font-size: 1.5rem;
+  }
+}
+@media screen and (min-width: 1440px) {
+  html:root {
+    font-size: 19px;
+  }
+}
+@media screen and (min-width: 1920px) {
+  html:root {
+    font-size: 22px;
+  }
 }/*# sourceMappingURL=about-me.css.map */

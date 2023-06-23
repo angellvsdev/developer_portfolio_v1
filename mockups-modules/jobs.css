@@ -210,4 +210,10 @@ body {
   height: 4rem;
   justify-content: center;
   margin: 0 5px;
+}
+
+@media screen and (min-width: 810px) {
+  html:root {
+    font-size: 19px;
+  }
 }/*# sourceMappingURL=jobs.css.map */
