@@ -50,11 +50,11 @@ body {
 
 .general_profile {
   width: 100vw;
-  height: 100vh;
+  height: 105vh;
   background: #F2F2F2;
   display: flex;
   justify-content: center;
-  flex-flow: column wrap;
+  flex-flow: row wrap;
 }
 
 .soft_skills {
@@ -79,7 +79,7 @@ body {
   width: 14rem;
   background: #5A7302;
   align-self: center;
-  margin-top: 85px;
+  margin-top: 140px;
 }
 
 #prf-img {
@@ -96,12 +96,12 @@ body {
 .dev__name {
   font-size: 1.85rem;
   text-align: center;
-  font-family: "modern-aristocrat", "Helvetica", "sans-serif";
+  font-family: "Raleway", "Arial";
 }
 
 .dev__plate {
   text-align: center;
-  font-family: "modern-aristocrat", "Helvetica", "sans-serif";
+  font-family: "Raleway", "Arial";
   font-size: 1.35rem;
 }
 
@@ -127,8 +127,9 @@ body {
 .soft_skills, .technical_skills {
   display: flex;
   flex-direction: column;
-  font-family: "modern-aristocrat", "Helvetica", "sans-serif";
+  font-family: "Raleway", "Arial";
   font-size: 2.5rem;
+  height: 100vh;
 }
 .soft_skills__flag, .technical_skills__flag {
   align-self: center;
@@ -163,6 +164,9 @@ body {
 @media screen and (min-width: 1280px) {
   html:root {
     font-size: 17px;
+  }
+  .general_profile {
+    height: 130vh;
   }
   .data__dev_description,
   .technical_skills__legend, .technical_skills__list,

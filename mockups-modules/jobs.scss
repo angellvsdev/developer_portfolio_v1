@@ -161,7 +161,7 @@ body {
 
 .project_name {
     background: $green-gradient;
-    font-family: $titles;
+    font-family: $descriptions;
     grid-area: pname;
     padding: 15px;
 }
@@ -215,8 +215,33 @@ body {
     }
 }
 
+/*
 @media screen and (min-width: 810px) {
     html:root {
-        font-size: 19px;
+        font-size: 14px;
+    }
+}
+*/
+
+@media screen and (min-width: 1280px) {
+    .project_specs_container > * {
+        background: $new-white;
+        color: $brown;
+    }
+
+    .project_desc {
+        max-width: 80vw;
+    }
+
+    .main_menu_container {
+        display: flex;
+        flex-flow: column;
+        position: absolute;
+        z-index: 30;
+    }
+
+    .mv_container {
+        margin-top: 40px;
+        height: 60vh;
     }
 }

@@ -32,11 +32,11 @@ body {
 
 .general_profile {
     width: 100vw;
-    height: 100vh;
+    height: 105vh;
     background: $new-white;
     display: flex;
     justify-content: center;
-    flex-flow: column wrap;
+    flex-flow: row wrap;
 }
 
 .soft_skills {
@@ -61,7 +61,7 @@ body {
     width: 14rem;
     background: $forest-green;   
     align-self: center;
-    margin-top: 85px;
+    margin-top: 140px;
 }
 
 #prf-img {
@@ -111,6 +111,7 @@ body {
     flex-direction: column;
     font-family: $titles;
     font-size: 2.5rem;
+    height: 100vh;
 
         &__flag {
             align-self: center;
@@ -152,6 +153,10 @@ body {
         font-size: 17px;
     }
 
+    .general_profile {
+        height: 130vh;
+    }
+
     .data__dev_description,
     .technical_skills__legend, .technical_skills__list,
     .soft_skills__legend, .soft_skills__list {
@@ -171,7 +176,8 @@ body {
 @media screen and (min-width: 1440px) { 
     html:root {
         font-size: 19px;
-    }    
+    }
+    
 }
 
 @media screen and (min-width: 1920px) {

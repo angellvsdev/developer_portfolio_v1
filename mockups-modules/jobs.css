@@ -159,7 +159,7 @@ body {
 
 .project_name {
   background: linear-gradient(45deg, #93A603, #A9BF04, #5A7302);
-  font-family: "modern-aristocrat", "Helvetica", "sans-serif";
+  font-family: "Raleway", "Arial";
   grid-area: pname;
   padding: 15px;
 }
@@ -212,8 +212,29 @@ body {
   margin: 0 5px;
 }
 
+/*
 @media screen and (min-width: 810px) {
-  html:root {
-    font-size: 19px;
+    html:root {
+        font-size: 14px;
+    }
+}
+*/
+@media screen and (min-width: 1280px) {
+  .project_specs_container > * {
+    background: #F2F2F2;
+    color: #110800;
+  }
+  .project_desc {
+    max-width: 80vw;
+  }
+  .main_menu_container {
+    display: flex;
+    flex-flow: column;
+    position: absolute;
+    z-index: 30;
+  }
+  .mv_container {
+    margin-top: 40px;
+    height: 60vh;
   }
 }/*# sourceMappingURL=jobs.css.map */
