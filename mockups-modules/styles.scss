@@ -7,6 +7,7 @@ html:root {
 
 body {
     background: $new-white;
+    overflow-x: hidden;
 }
 
 /* Menu principal de navegación */
@@ -106,12 +107,16 @@ body {
         flex-basis: 12%;
         height: 80%;
         margin-left: 5px;
-    }
+        transition-property: background-color;
+        transition-duration: 1s;
+        }
+
+        &__dott:focus {background-color: $brown;}
     }
 }
 
 .dott-active {
-  background: $brown;
+  background-color: $brown;
 }
 
 /* Encabezado de la presentación de mis proyectos y stack de tecnologías. */
@@ -525,7 +530,7 @@ body {
     color: $new-white;
     display: flex;
     flex-direction: column;
-    width: 100vw;
+    width: 99vw;
 }
 
 .homepage_footer__legend {

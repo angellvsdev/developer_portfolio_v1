@@ -24,6 +24,7 @@ html:root {
 
 body {
   background: #F2F2F2;
+  overflow-x: hidden;
 }
 
 /* Menu principal de navegación */
@@ -120,10 +121,15 @@ body {
   flex-basis: 12%;
   height: 80%;
   margin-left: 5px;
+  transition-property: background-color;
+  transition-duration: 1s;
+}
+.header_content__stage_dotts__dott:focus {
+  background-color: #110800;
 }
 
 .dott-active {
-  background: #110800;
+  background-color: #110800;
 }
 
 /* Encabezado de la presentación de mis proyectos y stack de tecnologías. */
@@ -529,7 +535,7 @@ body {
   color: #F2F2F2;
   display: flex;
   flex-direction: column;
-  width: 100vw;
+  width: 99vw;
 }
 
 .homepage_footer__legend {
