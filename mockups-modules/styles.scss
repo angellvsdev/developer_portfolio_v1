@@ -115,10 +115,6 @@ body {
     }
 }
 
-.dott-active {
-  background-color: $brown;
-}
-
 /* Encabezado de la presentación de mis proyectos y stack de tecnologías. */
 .discovering_zone_title {
     font-family: $titles;
@@ -211,10 +207,12 @@ body {
     border-radius: $main-border;
     box-shadow: $main-shadow;
     display: flex;
-    flex-direction: column;
+    flex-flow: column nowrap;
     height: 85%;
     justify-content: center;
     padding: 10px;
+    width: 21rem;
+    margin: auto;
 }
 
 .container__photo {
@@ -225,22 +223,24 @@ body {
     margin-top: 10px;
     object-fit: cover;
     width: 95%;
-    
-    //
 }
 
 .project_data {
     padding: 10px;
+    display: flex;
+    flex-flow: column nowrap;
 }
 
 .project_data > * {
   margin: 10px;
+  width: 80%;
 }
 
 .project_data__name {
     font-family: $titles;
     font-size: $titles-size;
     text-align: center;
+    align-self: center;
 }
 
 .project_data__description {
@@ -250,6 +250,10 @@ body {
     overflow: hidden;
     position: relative;
     text-align: center;
+    width: 90%;
+    margin: auto;
+    word-wrap: break-word;
+    text-overflow: ellipsis;
 }
 
 .vanish_txt {
@@ -263,37 +267,44 @@ body {
 .project_data__view_more_opt {
     background: $brown;
     border-radius: $main-border;
-    border: none;
     color: $new-white;
     font-family: $descriptions;
     height: 2.45rem;
     margin-top: 10px;
     width: 9rem;
+    text-align: center;
+    text-decoration: none;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
 }
 
 .project_data__used_tech_stack {
     display: flex;
-    height: 4rem;
     list-style: none;
     margin-top: 18px;
     padding: 0;
     width: 90%;
+    overflow-x: auto;
+    overflow-y: hidden;
 }
 
 .used_tech_stack__icon_el {
     align-items: center;
     border-radius: 50%;
-    box-shadow: $main-shadow;
     display: flex;
-    flex-basis: 4rem;
-    justify-content: center;
-    overflow-x: scroll;
-    overflow-y: hidden;
+    justify-content: space-around;    
+    width: 5rem;
+    padding: 1.5rem;
+    margin-left: 10px;
+    background: $brown;
     
     & > i {
         align-self: center;
         font-size: 2rem;
         text-align: center;
+        color: $brighter-forest-green;
     }
 }
 
@@ -587,6 +598,10 @@ body {
   .stack_panel {
     background: $brown;
     margin-bottom: 115px;
+  }
+
+  .fav_project_presentation__container {
+    width: 48rem;
   }
 }
 

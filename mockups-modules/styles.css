@@ -128,10 +128,6 @@ body {
   background-color: #110800;
 }
 
-.dott-active {
-  background-color: #110800;
-}
-
 /* Encabezado de la presentación de mis proyectos y stack de tecnologías. */
 .discovering_zone_title {
   font-family: "Raleway", "Arial";
@@ -222,10 +218,12 @@ body {
   border-radius: 10px;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
   display: flex;
-  flex-direction: column;
+  flex-flow: column nowrap;
   height: 85%;
   justify-content: center;
   padding: 10px;
+  width: 21rem;
+  margin: auto;
 }
 
 .container__photo {
@@ -241,16 +239,20 @@ body {
 
 .project_data {
   padding: 10px;
+  display: flex;
+  flex-flow: column nowrap;
 }
 
 .project_data > * {
   margin: 10px;
+  width: 80%;
 }
 
 .project_data__name {
   font-family: "Raleway", "Arial";
   font-size: 1.85rem;
   text-align: center;
+  align-self: center;
 }
 
 .project_data__description {
@@ -260,6 +262,10 @@ body {
   overflow: hidden;
   position: relative;
   text-align: center;
+  width: 90%;
+  margin: auto;
+  word-wrap: break-word;
+  text-overflow: ellipsis;
 }
 
 .vanish_txt {
@@ -273,37 +279,44 @@ body {
 .project_data__view_more_opt {
   background: #110800;
   border-radius: 10px;
-  border: none;
   color: #F2F2F2;
   font-family: "Raleway", "Arial";
   height: 2.45rem;
   margin-top: 10px;
   width: 9rem;
+  text-align: center;
+  text-decoration: none;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
 }
 
 .project_data__used_tech_stack {
   display: flex;
-  height: 4rem;
   list-style: none;
   margin-top: 18px;
   padding: 0;
   width: 90%;
+  overflow-x: auto;
+  overflow-y: hidden;
 }
 
 .used_tech_stack__icon_el {
   align-items: center;
   border-radius: 50%;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
   display: flex;
-  flex-basis: 4rem;
-  justify-content: center;
-  overflow-x: scroll;
-  overflow-y: hidden;
+  justify-content: space-around;
+  width: 5rem;
+  padding: 1.5rem;
+  margin-left: 10px;
+  background: #110800;
 }
 .used_tech_stack__icon_el > i {
   align-self: center;
   font-size: 2rem;
   text-align: center;
+  color: #A9BF04;
 }
 
 .contact_section_title {
@@ -581,6 +594,9 @@ body {
   .stack_panel {
     background: #110800;
     margin-bottom: 115px;
+  }
+  .fav_project_presentation__container {
+    width: 48rem;
   }
 }
 @media screen and (min-width: 1600px) {
