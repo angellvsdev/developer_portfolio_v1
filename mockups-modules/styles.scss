@@ -115,6 +115,10 @@ body {
     }
 }
 
+.dott-active {
+  background: $brown;
+}
+
 /* Encabezado de la presentación de mis proyectos y stack de tecnologías. */
 .discovering_zone_title {
     font-family: $titles;
@@ -254,14 +258,6 @@ body {
     margin: auto;
     word-wrap: break-word;
     text-overflow: ellipsis;
-}
-
-.vanish_txt {
-    background: linear-gradient(to top, $new-white,transparent);
-    height: 10rem;
-    position: absolute;
-    transform: translateY(-10rem);
-    width: 100%;
 }
 
 .project_data__view_more_opt {

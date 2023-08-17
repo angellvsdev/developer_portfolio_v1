@@ -16,17 +16,18 @@ for (let index = 1; index < introductionExplanations.length; index++) {
 const allVignetButtons = document.querySelector(".header_content__stage_dotts_dott")
 
 let intervalIndex = 0
+let stageOptions = document.querySelectorAll('.header_content__stage_dotts__dott')
 
-document.addEventListener('click', (e) => {
-    if (e.target.matches(".header_content__stage_dotts__dott")) {
-        intervalIndex = e.target.id
-        explainationContainer.textContent = introductionExplanations[e.target.id]
-    }
-})
+
+// document.addEventListener('click', (e) => {
+//     if (e.target.matches(".header_content__stage_dotts__dott")) {
+//         intervalIndex = e.target.id
+//         explainationContainer.textContent = introductionExplanations[e.target.id]
+//     }
+// })
 
 setInterval(() => {
     if (intervalIndex < introductionExplanations.length) {
-        let stageOptions = document.querySelectorAll('.header_content__stage_dotts__dott')
         let pastOption = intervalIndex - 1
 
         stageOptions[stageOptions.length - 1].style.background = 'none'

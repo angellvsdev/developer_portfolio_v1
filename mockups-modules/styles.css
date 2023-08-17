@@ -128,6 +128,10 @@ body {
   background-color: #110800;
 }
 
+.dott-active {
+  background: #110800;
+}
+
 /* Encabezado de la presentación de mis proyectos y stack de tecnologías. */
 .discovering_zone_title {
   font-family: "Raleway", "Arial";
@@ -266,14 +270,6 @@ body {
   margin: auto;
   word-wrap: break-word;
   text-overflow: ellipsis;
-}
-
-.vanish_txt {
-  background: linear-gradient(to top, #F2F2F2, transparent);
-  height: 10rem;
-  position: absolute;
-  transform: translateY(-10rem);
-  width: 100%;
 }
 
 .project_data__view_more_opt {

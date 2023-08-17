@@ -33,7 +33,7 @@ class webProject {
 }
 
 const PROJECT_ONE = new webProject(
-    ['https://t0.gstatic.com/licensed-image?q=tbn:ANd9GcQkrjYxSfSHeCEA7hkPy8e2JphDsfFHZVKqx-3t37E4XKr-AT7DML8IwtwY0TnZsUcQ'],
+    ['https://t0.gstatic.com/licensed-image?q=tbn:ANd9GcQkrjYxSfSHeCEA7hkPy8e2JphDsfFHZVKqx-3t37E4XKr-AT7DML8IwtwY0TnZsUcQ', 'https://t0.gstatic.com/licensed-image?q=tbn:ANd9GcQkrjYxSfSHeCEA7hkPy8e2JphDsfFHZVKqx-3t37E4XKr-AT7DML8IwtwY0TnZsUcQ', 'https://t0.gstatic.com/licensed-image?q=tbn:ANd9GcQkrjYxSfSHeCEA7hkPy8e2JphDsfFHZVKqx-3t37E4XKr-AT7DML8IwtwY0TnZsUcQ'],
     'Dummie',
     'Este proyecto va de un perrito muy bonito que me conseguí ayer, miren lo lindo que está nomas.',
     ['HTML', 'CSS', 'JavaScript'],
@@ -43,4 +43,15 @@ const PROJECT_ONE = new webProject(
     true
     )
 
-export let webProjectsList = [PROJECT_ONE]
+    const PROJECT_TWO = new webProject(
+        ['A', 'B'],
+        'Dummie',
+        'Este proyecto va de un perrito muy bonito que me conseguí ayer, miren lo lindo que está nomas.',
+        ['HTML', 'CSS', 'JavaScript'],
+        'Infinite months',
+        'https://youtube.com',
+        'https://youtube.com',
+        true
+        )
+
+export let webProjectsList = [PROJECT_ONE, PROJECT_TWO]

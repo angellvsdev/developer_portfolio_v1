@@ -28,6 +28,8 @@ body {
   flex-flow: column wrap;
   min-height: 100vh;
   min-width: 100vw;
+  overflow-x: hidden;
+  align-items: center;
 }
 
 .landing_menu {
@@ -132,7 +134,7 @@ body {
   display: grid;
   gap: 5px;
   min-height: 50vh;
-  width: 100vw;
+  width: 90vw;
   color: #F2F2F2;
   grid-template-areas: "pname pname" "pdesc pdesc" "techstack techstack" "deadline deadline" "pmenu pmenu";
 }
@@ -155,6 +157,7 @@ body {
   justify-self: center;
   margin: 5px 5px;
   width: 97%;
+  text-align: center;
 }
 
 .project_name {
@@ -169,17 +172,16 @@ body {
   font-family: "Raleway", "Arial";
   font-size: 1rem;
   grid-area: pdesc;
-  overflow: scroll;
+  overflow: auto;
   padding: 10px;
   text-align: center;
-  max-height: 13rem;
 }
 
 .techs_used {
   background: linear-gradient(45deg, #93A603, #A9BF04, #5A7302);
   font-size: 3rem;
   grid-area: techstack;
-  overflow-x: scroll;
+  overflow-x: auto;
   overflow-y: hidden;
   padding: 5px;
 }
@@ -210,6 +212,7 @@ body {
   height: 4rem;
   justify-content: center;
   margin: 0 5px;
+  text-decoration: none;
 }
 
 /*
