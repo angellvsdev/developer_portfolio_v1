@@ -1,57 +1,58 @@
-export const developerProfile = {
-    profilePhoto: [],
-    completeName: "Angel Leonardo",
-    surnames: "Vera Soto",
-    age: 18,
-    developerRoles: ["Desarrollador Web / Programador Front-End"],
-    softSkills: [],
-    technicalSkills: new Map(),
-    socialMediaLinks: []
+import { developerProfile } from "./app_db.js";
+
+let generalProfileSection = {
+    profilePhoto: document.getElementById('prf-img'),
+    completeName: document.querySelector('.dev__name'),
+    roleTitle: document.querySelector('.dev__plate'),
+    aboutMeDescription: document.querySelector('.data__dev_description'),
+    personalInstagram: document.getElementById('instagram-page'),
+    personalGitHub: document.getElementById('github-page'),
+    personalLinkedin: document.getElementById('linkedin-page')
 }
 
-developerProfile.technicalSkills.set('HTML', '<i class="fa-brands fa-html5"></i>')
-developerProfile.technicalSkills.set('CSS', '<i class="fa-brands fa-css3-alt"></i>')
-developerProfile.technicalSkills.set('JavaScript', '<i class="fa-brands fa-js"></i>')
-developerProfile.technicalSkills.set('CMD', '<i class="fa-solid fa-terminal"></i>')
-developerProfile.technicalSkills.set('Git', '<i class="fa-brands fa-git-alt"></i>')
-developerProfile.technicalSkills.set('GitHub', '<i class="fa-brands fa-github"></i>')
-developerProfile.technicalSkills.set('SASS', '<i class="fa-brands fa-sass"></i>')
-developerProfile.technicalSkills.set('React JS', '<i class="fa-brands fa-react"></i>')
+const setProfileSectionInformation = () => {
+    generalProfileSection.profilePhoto.src = developerProfile.profilePhoto[1]
+    generalProfileSection.completeName.textContent = `${developerProfile.completeName} ${developerProfile.surnames}`
+    generalProfileSection.roleTitle.textContent = developerProfile.developerRoles[0]
+    generalProfileSection.personalInstagram.href = developerProfile.socialMediaLinks[0]
+    generalProfileSection.personalGitHub.href = developerProfile.socialMediaLinks[1]
+    generalProfileSection.personalLinkedin.href = developerProfile.socialMediaLinks[2]
 
-class webProject {
-    constructor(footage, titleName, infoDescription, techsUsed, completionTime, projectRepository, projectHyperlink, isBestProject, infoModule) {
-        this.footage = footage
-        this.titleName = titleName
-        this.infoDescription = infoDescription
-        this.techsUsed = techsUsed
-        this.completionTime = completionTime
-        this.projectRepository = projectRepository
-        this.projectHyperlink = projectHyperlink
-        this.isBestProject = isBestProject
-        this.infoModule = infoModule
+}
+
+setProfileSectionInformation()
+
+let technicalSkillsSection = document.querySelector('.technical_skills__list'), sectionElement = document.createElement('li'), sectionElementNodeCopy
+    sectionElement.classList.add('list__element')
+
+const insertTechElementsIn = () => {
+    let techStackMap = developerProfile.technicalSkills
+
+    for (let [pointer, value] of techStackMap) {
+        sectionElementNodeCopy = sectionElement.cloneNode(true)
+
+        sectionElementNodeCopy.innerHTML = value + ' ' + pointer
+
+        technicalSkillsSection.appendChild(sectionElementNodeCopy)
     }
+
 }
 
-const PROJECT_ONE = new webProject(
-    ['https://t0.gstatic.com/licensed-image?q=tbn:ANd9GcQkrjYxSfSHeCEA7hkPy8e2JphDsfFHZVKqx-3t37E4XKr-AT7DML8IwtwY0TnZsUcQ', 'https://t0.gstatic.com/licensed-image?q=tbn:ANd9GcQkrjYxSfSHeCEA7hkPy8e2JphDsfFHZVKqx-3t37E4XKr-AT7DML8IwtwY0TnZsUcQ', 'https://t0.gstatic.com/licensed-image?q=tbn:ANd9GcQkrjYxSfSHeCEA7hkPy8e2JphDsfFHZVKqx-3t37E4XKr-AT7DML8IwtwY0TnZsUcQ'],
-    'Dummie',
-    'Este proyecto va de un perrito muy bonito que me conseguí ayer, miren lo lindo que está nomas.',
-    ['HTML', 'CSS', 'JavaScript'],
-    'Infinite months',
-    'https://youtube.com',
-    'https://youtube.com',
-    true
-    )
+insertTechElementsIn()
 
-    const PROJECT_TWO = new webProject(
-        ['A', 'B'],
-        'Dummie',
-        'Este proyecto va de un perrito muy bonito que me conseguí ayer, miren lo lindo que está nomas.',
-        ['HTML', 'CSS', 'JavaScript'],
-        'Infinite months',
-        'https://youtube.com',
-        'https://youtube.com',
-        true
-        )
+let softSkillsSection = document.querySelector('.soft_skills__list')
 
-export let webProjectsList = [PROJECT_ONE, PROJECT_TWO]
+const insertSoftSkillsElementsIn = () => {
+    let softSkillsList = developerProfile.softSkills
+
+    softSkillsList.forEach(skill => {
+        sectionElementNodeCopy = sectionElement.cloneNode(true)
+
+        sectionElementNodeCopy.textContent = skill
+
+        softSkillsSection.appendChild(sectionElementNodeCopy)
+
+    })
+}
+
+insertSoftSkillsElementsIn()

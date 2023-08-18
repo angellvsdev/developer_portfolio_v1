@@ -1,8 +1,13 @@
 @import "_variables.scss", '_funcs-and-components.scss';
 
+html:root  {
+    font-size: 10px;
+}
+
 body {
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: column nowrap;
+    font-size: 16px;
 }
 
 .landing_menu {
@@ -12,16 +17,16 @@ body {
     box-shadow: $main-shadow;
     display: flex;
     flex-direction: row;
-    height: 2.5rem;
+    height: 4.5rem;
     justify-content: space-around;
     margin: 16px auto;
     position: absolute;
-    width: 12.5rem;
+    width: 18.5rem;
     
         &__option {
              background: none;
              border: none;
-             font-size: 1.2rem;
+             font-size: 1.7rem;
              
              & a {
               color: $new-white;
@@ -31,24 +36,19 @@ body {
 }
 
 .general_profile {
-    width: 100vw;
-    height: 105vh;
     background: $new-white;
     display: flex;
     justify-content: center;
-    flex-flow: row wrap;
+    flex-flow: column wrap;
+    min-height: 100vh;
 }
 
 .soft_skills {
-    width: 100vw;
-    height: 75vh;
     background: $brown;
     color: $new-white;
 }
 
 .technical_skills {
-    width: 100vw;
-    height: 75vh;
     background: $green-gradient;
     color: $brown;
 }
@@ -90,7 +90,8 @@ body {
     text-align: center;
     font-family: $descriptions;
     font-size: $desc-size;
-    overflow: scroll;
+    overflow: auto;
+    padding: 20px;
 }
 
 .contact_links {
@@ -111,7 +112,7 @@ body {
     flex-direction: column;
     font-family: $titles;
     font-size: 2.5rem;
-    height: 100vh;
+    //min-height: 100vh;
 
         &__flag {
             align-self: center;
@@ -143,9 +144,9 @@ body {
         }
 }
 
-#html5-symbol {
-    color: #d8460d;
-    box-shadow: $main-shadow;
+.soft_skills__list {
+    list-style-type: disc;
+    list-style-position:inside;
 }
 
 @media screen and (min-width: 1280px) {

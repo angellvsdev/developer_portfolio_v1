@@ -1,4 +1,5 @@
-import { webProjectsList } from './app_about-me.js'
+import { webProjectsList } from './app_db.js'
+import { developerProfile } from './app_db.js'
 
 
 let projectElectionMenuNode = document.querySelector('.pl_menu'),
@@ -11,7 +12,7 @@ optionNodeInnerButton.classList.add('opt_button')
 electionMenuOptionNode.appendChild(optionNodeInnerButton)
 
 let projectInformation = {
-    mediaView: document.querySelector('.project_media_list'),
+    mediaView: document.querySelector('.mv_container'),
     titleName: document.querySelector('.project_name'),
     information: document.querySelector('.project_desc > p'),
     techStack: document.querySelector('.techs_used'),
@@ -30,12 +31,6 @@ const setProjectsElections = () => {
 
 setProjectsElections()
 
-const setProjectMediaSelection = () => {
-
-}
-
-const setProjectInformationSections = () => {}
-
 let mediaOption = document.createElement('li'), mediaOptionButton = document.createElement('button'), mediaOptionNodeCopy
 mediaOption.classList.add('media_el')
 mediaOptionButton.classList.add('media_el__opt_button')
@@ -44,14 +39,20 @@ mediaOption.appendChild(mediaOptionButton)
 let mediaMenuContainer = document.querySelector('.media_menu_container')
 
 let imagesList = [], sourceImages,
-    imageSelection = document.querySelector('.project_media_list')
+    imageSelection = document.querySelector('.project_media_list'),
+    techInStack = document.createElement('li'), techNodeCopy,
+    imageView = document.getElementById('footage-view')
 
 document.addEventListener("click", e => {
-    if (e.target.matches('.pl_menu_opt')) {
+    if (e.target.matches('.opt_button')) {
+        imageView.src = ""
         imageSelection.innerHTML = ``
         imagesList = []
+        let triggerPointer = e.target.closest('li').id        
 
-        sourceImages = webProjectsList[e.target.id].footage
+        //console.log(e.target.closest('li'))
+
+        sourceImages = webProjectsList[triggerPointer].footage
         //console.log(sourceImages)
 
 
@@ -73,37 +74,31 @@ document.addEventListener("click", e => {
             imageSelection.appendChild(mediaOptionNodeCopy)  
             //console.log(index)
         }
+
+        projectInformation.titleName.textContent = webProjectsList[triggerPointer].titleName
+        projectInformation.information.textContent = webProjectsList[triggerPointer].infoDescription
+        projectInformation.investedHours.textContent = webProjectsList[triggerPointer].completionTime
+        projectInformation.githubURL.href = webProjectsList[triggerPointer].projectRepository
+        projectInformation.pageURL.href = webProjectsList[triggerPointer].projectHyperlink
+
+        techInStack.classList.add('techs_used__tech')
+        projectInformation.techStack.innerHTML = ``
+
+        webProjectsList[triggerPointer].techsUsed.forEach(tech => {
+            techNodeCopy = techInStack.cloneNode()
+            techNodeCopy.innerHTML = developerProfile.technicalSkills.get(tech)
+            projectInformation.techStack.appendChild(techNodeCopy)
+        })
+    }
+
+    if (e.target.matches('.media_el__opt_button')) {
+        let triggerPointer = e.target.closest('li')
+        imageView.src = triggerPointer.dataset.imageSource
     }
 })
 
-        
-// let loadProjectMedia = e.target.id
-
-// projectInformation.mediaView = webProjectsList[e.target.id].footage.forEach(mediaEl => {
-
-//     if (e.target.id !== mediaMenuContainer.id) {
-
-//         webProjectsList[e.target.id].footage.forEach(media => {
-
-//             mediaOptionNodeCopy = mediaOption.cloneNode(true)
-//             projectInformation.mediaView.appendChild(mediaOptionNodeCopy)
-//         })
-
-//         mediaMenuContainer.id = e.target.id
-//     }
-// })
-
-// imagesList.forEach(image => {
-        //     mediaOptionNodeCopy = mediaOption.cloneNode(true)
-        //     mediaOptionNodeCopy.setAttribute('data-image-source', image.dataset.imageSource)
-        //     imageSelection.appendChild(mediaOptionNodeCopy)  
-        // })
-
-        
-        // sourceImages.forEach(image => {
-
-        //     mediaOption.setAttribute('data-image-source', image)
-
-        //     console.log(imagesList.push(mediaOption))
-        //     console.log(imagesList)
-        // })
+// let triggerPointer = e.target.closest('li').id  
+//         sourceImages = webProjectsList[triggerPointer].footage
+//         imageView.src = sourceImages[triggerPointer]
+//         imageSelection.innerHTML = ``
+//         imagesList = []      

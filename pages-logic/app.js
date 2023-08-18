@@ -1,5 +1,5 @@
-import { webProjectsList } from "./app_about-me.js";
-import { developerProfile } from "./app_about-me.js";
+import { webProjectsList } from "./app_db.js";
+import { developerProfile } from "./app_db.js";
 
 let introductionExplanations = [1,2,3,4,5],
     explainationContainer = document.querySelector('.header_content__txt_vignets'),
@@ -37,14 +37,14 @@ setInterval(() => {
 
         intervalIndex++
 
-        stageOptions[pastOption].style.background = 'none'
+        if (pastOption >= 0) {
+            stageOptions[pastOption].style.background = 'none'
+        }
     }
     else {
         intervalIndex = 0
     }
 }, 2000);
-
-console.log(webProjectsList)
 
 let stellarProjectContainer = {
     projectFace: document.querySelector(".container__photo"),
