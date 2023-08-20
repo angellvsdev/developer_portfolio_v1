@@ -26,6 +26,11 @@ body {
     justify-content: space-around;
     margin: 10px auto 10px;
     width: 12.5rem;
+    transition: background-color .1s .1s ease-out;
+
+    &:hover {
+      background: $forest-green;
+    }
     
         &__option {
              background: none;
@@ -70,6 +75,12 @@ body {
                 border-style: none;
                 flex-basis: 50%;
                 min-height: 50%;
+                cursor: pointer;
+                transition: background-color .2s .1s ease-out;
+
+                &:hover {
+                    background: $brighter-forest-green;
+                }
             }
         }
     }
@@ -92,13 +103,19 @@ body {
             margin-top: 0;
             
             &__opt_button {
-                background: $pale-forest-green;
+                background: $green-gradient;
                 border-radius: 3px;
                 border: 2px solid #FFF;
                 box-shadow: $main-shadow;
                 height: 100%;
                 margin: 0 2px;
                 min-width: 1.5rem;
+                cursor: pointer;
+                transition: background-color 1s .2s ease-out;
+
+                &:hover {
+                    background: $brighter-forest-green;
+                }
             }
         }
     }
@@ -110,9 +127,12 @@ body {
     justify-content: center;
     margin-bottom: 50px;
     
+    
     &__img_container {
         min-height: 80%;
         width: 85%;
+        transition: opacity .5s .1s ease-in-out;
+        opacity: 0;
 
         .footage {
             height: 100%;
@@ -219,16 +239,35 @@ body {
         justify-content: center;
         margin: 0 5px;
         text-decoration: none;
+        transition: background-color .1s .1s ease-out;
+
+        &:hover {
+            background: $forest-green;
+        }
     }
 }
 
-/*
-@media screen and (min-width: 810px) {
-    html:root {
-        font-size: 14px;
-    }
+.img_modal {
+    width: 100vw;
+    height: 100vh;
+    font-size: $titles-size;
+    font-family: $titles;
+    color: $brown;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    background: $new-white;
+    position: absolute;
+    left: 0%;
+    justify-content: center;
+    z-index: 10;
+    transform-origin: top;
+    top: 20vh;
+    transition-property: height;
+    transition-duration: 1s;
+    transition-delay: 0.25s;
+    transition-timing-function: ease-in;
 }
-*/
 
 @media screen and (min-width: 1280px) {
     .project_specs_container > * {
@@ -250,6 +289,6 @@ body {
     .mv_container {
         margin-top: 40px;
         height: 90vh;
-        width: 90vw; /* Antes estaba en 60 y width no estaba */
+        width: 90vw;
     }
 }

@@ -1,4 +1,9 @@
-import { developerProfile } from "./app_db.js";
+import { developerProfile } from "./dev_db.js";
+import { webProjectsList } from "./projects_db.js";
+
+if (webProjectsList.length === 0) {   
+    document.querySelector('.landing_menu__option:nth-child(2)').style.display = 'none'
+}
 
 let generalProfileSection = {
     profilePhoto: document.getElementById('prf-img'),

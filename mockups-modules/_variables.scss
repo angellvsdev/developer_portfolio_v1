@@ -15,11 +15,7 @@ $dark-mode-black: #131313;
 /* Gradientes */
 $green-gradient: linear-gradient(45deg, $pale-forest-green, $brighter-forest-green, $forest-green);
 
-/* Paleta de colores complementarios */
-$brighter-chicken-yellow: #f2e205;
-$normal-chicken-yellow: #F2CB05;
-$juice-orange: #F29F05;
-$darkest-juice-orange: #D97904;
+/* Complementarios */
 $brown: #110800;
 
 /* Bordes */
@@ -27,23 +23,3 @@ $main-border: 10px;
 
 /* Sombras */
 $main-shadow: 0 20px 40px rgba(0, 0, 0, .4);
-
-
-/* Instalación de fuentes personalizadas */
-@font-face {
-    font-family: 'modern-aristocrat';
-    src: url('./fonts/modern_aristocrat-webfont.woff2') format('woff2'),
-         url('./fonts/modern_aristocrat-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-
-}
-
-@font-face { // Recuerda reemplazar esta fuente por una más acorde y legible, esta está fea
-    font-family: 'made-tommy';
-    src: url('./fonts/made_tommy_regular_outline_personal_use-webfont.woff2') format('woff2'),
-         url('./fonts/made_tommy_regular_outline_personal_use-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-
-}

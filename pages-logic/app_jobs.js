@@ -1,15 +1,20 @@
-import { webProjectsList } from './app_db.js'
-import { developerProfile } from './app_db.js'
+import { webProjectsList } from './projects_db.js'
+import { developerProfile } from './dev_db.js'
 
 
 let projectElectionMenuNode = document.querySelector('.pl_menu'),
     electionMenuOptionNode = document.createElement('li'),
     optionNodeInnerButton = document.createElement('button'),
+    projectSpecsContainer = document.querySelector('.project_specs_container'),
     electionMenuOptionNodeCopy
 
 electionMenuOptionNode.classList.add('pl_menu_opt')
+
 optionNodeInnerButton.classList.add('opt_button')
+
 electionMenuOptionNode.appendChild(optionNodeInnerButton)
+
+projectSpecsContainer.style.display = 'none'
 
 let projectInformation = {
     mediaView: document.querySelector('.mv_container'),
@@ -36,43 +41,42 @@ mediaOption.classList.add('media_el')
 mediaOptionButton.classList.add('media_el__opt_button')
 mediaOption.appendChild(mediaOptionButton)
 
-let mediaMenuContainer = document.querySelector('.media_menu_container')
-
 let imagesList = [], sourceImages,
     imageSelection = document.querySelector('.project_media_list'),
     techInStack = document.createElement('li'), techNodeCopy,
     imageView = document.getElementById('footage-view')
+    imageView.style.display = 'none'
+
 
 document.addEventListener("click", e => {
     if (e.target.matches('.opt_button')) {
+        document.querySelector('.mv_container__img_container').style.opacity = '0'
+        
+        imageView.style.display = 'none'
         imageView.src = ""
         imageSelection.innerHTML = ``
         imagesList = []
         let triggerPointer = e.target.closest('li').id        
 
-        //console.log(e.target.closest('li'))
+        projectSpecsContainer.style.display = 'initial'
 
         sourceImages = webProjectsList[triggerPointer].footage
-        //console.log(sourceImages)
-
+        
 
         for (let index = 0; index < sourceImages.length; index++) {
-            //console.log(sourceImages)
-            
             mediaOption.setAttribute('data-image-source', sourceImages[index])
 
             mediaOptionNodeCopy = mediaOption.cloneNode(true)
             imagesList.push(mediaOptionNodeCopy)
-            //console.log(imagesList)
-        }
 
-        //console.log(imagesList) 
+        }
+ 
 
         for (let index = 0; index < imagesList.length; index++) {
             mediaOptionNodeCopy = mediaOption.cloneNode(true)
             mediaOptionNodeCopy.setAttribute('data-image-source', imagesList[index].dataset.imageSource)
             imageSelection.appendChild(mediaOptionNodeCopy)  
-            //console.log(index)
+
         }
 
         projectInformation.titleName.textContent = webProjectsList[triggerPointer].titleName
@@ -93,12 +97,8 @@ document.addEventListener("click", e => {
 
     if (e.target.matches('.media_el__opt_button')) {
         let triggerPointer = e.target.closest('li')
+        imageView.style.display = 'initial'
+        document.querySelector('.mv_container__img_container').style.opacity = '1'
         imageView.src = triggerPointer.dataset.imageSource
     }
 })
-
-// let triggerPointer = e.target.closest('li').id  
-//         sourceImages = webProjectsList[triggerPointer].footage
-//         imageView.src = sourceImages[triggerPointer]
-//         imageSelection.innerHTML = ``
-//         imagesList = []      

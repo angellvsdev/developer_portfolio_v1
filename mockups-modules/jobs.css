@@ -1,23 +1,9 @@
-@charset "UTF-8";
 /* Fuentes */
 /* Paleta de colores principal */
 /* Gradientes */
-/* Paleta de colores complementarios */
+/* Complementarios */
 /* Bordes */
 /* Sombras */
-/* Instalación de fuentes personalizadas */
-@font-face {
-  font-family: "modern-aristocrat";
-  src: url("./fonts/modern_aristocrat-webfont.woff2") format("woff2"), url("./fonts/modern_aristocrat-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: "made-tommy";
-  src: url("./fonts/made_tommy_regular_outline_personal_use-webfont.woff2") format("woff2"), url("./fonts/made_tommy_regular_outline_personal_use-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
 html:root {
   font-size: 16px;
 }
@@ -43,6 +29,10 @@ body {
   justify-content: space-around;
   margin: 10px auto 10px;
   width: 12.5rem;
+  transition: background-color 0.1s 0.1s ease-out;
+}
+.landing_menu:hover {
+  background: #5A7302;
 }
 .landing_menu__option {
   background: none;
@@ -85,6 +75,11 @@ body {
   border-style: none;
   flex-basis: 50%;
   min-height: 50%;
+  cursor: pointer;
+  transition: background-color 0.2s 0.1s ease-out;
+}
+.main_menu_container .pl_menu_opt .opt_button:hover {
+  background: #A9BF04;
 }
 
 .media_menu_container {
@@ -103,13 +98,18 @@ body {
   margin-top: 0;
 }
 .media_menu_container .project_media_list .media_el__opt_button {
-  background: #93A603;
+  background: linear-gradient(45deg, #93A603, #A9BF04, #5A7302);
   border-radius: 3px;
   border: 2px solid #FFF;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
   height: 100%;
   margin: 0 2px;
   min-width: 1.5rem;
+  cursor: pointer;
+  transition: background-color 1s 0.2s ease-out;
+}
+.media_menu_container .project_media_list .media_el__opt_button:hover {
+  background: #A9BF04;
 }
 
 .mv_container {
@@ -121,6 +121,8 @@ body {
 .mv_container__img_container {
   min-height: 80%;
   width: 85%;
+  transition: opacity 0.5s 0.1s ease-in-out;
+  opacity: 0;
 }
 .mv_container__img_container .footage {
   height: 100%;
@@ -216,15 +218,34 @@ body {
   justify-content: center;
   margin: 0 5px;
   text-decoration: none;
+  transition: background-color 0.1s 0.1s ease-out;
+}
+.project_menu__option:hover {
+  background: #5A7302;
 }
 
-/*
-@media screen and (min-width: 810px) {
-    html:root {
-        font-size: 14px;
-    }
+.img_modal {
+  width: 100vw;
+  height: 100vh;
+  font-size: 1.85rem;
+  font-family: "Raleway", "Arial";
+  color: #110800;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  background: #F2F2F2;
+  position: absolute;
+  left: 0%;
+  justify-content: center;
+  z-index: 10;
+  transform-origin: top;
+  top: 20vh;
+  transition-property: height;
+  transition-duration: 1s;
+  transition-delay: 0.25s;
+  transition-timing-function: ease-in;
 }
-*/
+
 @media screen and (min-width: 1280px) {
   .project_specs_container > * {
     background: #F2F2F2;
@@ -242,6 +263,6 @@ body {
   .mv_container {
     margin-top: 40px;
     height: 90vh;
-    width: 90vw; /* Antes estaba en 60 y width no estaba */
+    width: 90vw;
   }
 }/*# sourceMappingURL=jobs.css.map */

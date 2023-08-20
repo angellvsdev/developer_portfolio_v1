@@ -1,23 +1,9 @@
-@charset "UTF-8";
 /* Fuentes */
 /* Paleta de colores principal */
 /* Gradientes */
-/* Paleta de colores complementarios */
+/* Complementarios */
 /* Bordes */
 /* Sombras */
-/* Instalación de fuentes personalizadas */
-@font-face {
-  font-family: "modern-aristocrat";
-  src: url("./fonts/modern_aristocrat-webfont.woff2") format("woff2"), url("./fonts/modern_aristocrat-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: "made-tommy";
-  src: url("./fonts/made_tommy_regular_outline_personal_use-webfont.woff2") format("woff2"), url("./fonts/made_tommy_regular_outline_personal_use-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
 html:root {
   font-size: 10px;
 }
@@ -40,9 +26,13 @@ body {
   margin: 16px auto;
   position: absolute;
   width: 18.5rem;
+  transition: background-color 0.1s 0.1s ease-out;
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
+}
+.landing_menu:hover {
+  background: #5A7302;
 }
 .landing_menu__option {
   background: none;
@@ -85,8 +75,10 @@ body {
 #prf-img {
   height: 100%;
   width: 100%;
-  -o-object-fit: fill;
-     object-fit: fill;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 50% 15%;
+     object-position: 50% 15%;
 }
 
 .dev {
@@ -123,6 +115,10 @@ body {
   padding: 0.9rem;
   font-size: 3rem;
   text-align: center;
+  transition: background-color 0.1s 0.1s ease-out;
+}
+.contact_links__site:hover {
+  background: #A9BF04;
 }
 
 .soft_skills, .technical_skills {
@@ -161,6 +157,24 @@ body {
   list-style-position: inside;
 }
 
+.floating {
+  animation-name: floating;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes floating {
+  0% {
+    transform: translate(0, 0px);
+  }
+  50% {
+    transform: translate(0, 15px);
+  }
+  100% {
+    transform: translate(0, 0px);
+  }
+}
 @media screen and (min-width: 1280px) {
   html:root {
     font-size: 17px;

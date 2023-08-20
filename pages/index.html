@@ -4,26 +4,31 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Mi nombre es Angel Vera, soy Desarrollador Front-End con React JS, actualmente tengo 18 años y mi objetivo es ser excelente y dar la solución que se necesita.">
+    <meta name="keywords" content="developer, reactjs, frontend, programador">
+    <meta name="author" content="angellvsdev">
+    <meta name="copyright" content="Angel Leonardo Vera Soto">
+    <meta name="robots" content="index, follow">
     <link rel="stylesheet" href="./../mockups-modules/styles.css">
     <link rel="stylesheet" href="./../mockups-modules/normalize_801.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,800;1,900&display=swap" rel="stylesheet">
-    <title>angellvsdev</title>
+    <title>angellvsdev | Programador y Desarrollador Front-End</title>
 </head>
 <body>
-    <div class="landing_menu">  <!-- Barra de navegación -->
+    <div class="landing_menu">
         <button type="menu" class="landing_menu__option"><a href="index.html"><i class="fa-solid fa-house"></a></i></button>
         <button type="menu" class="landing_menu__option"><a href="jobs.html"><i class="fa-solid fa-code"></a></i></button>
         <button type="menu" class="landing_menu__option"><a href="about-me.html"><i class="fa-regular fa-circle-question"></a></i></button>
         <button type="menu" class="landing_menu__option"><a href="#contractme"><i class="fa-solid fa-handshake"></i></a></button>
     </div>
-    <div class="home_header"> <!-- Encabezado principal -->
+    <div class="home_header">
         <div class="home_header__profile_img">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/4/45/A_small_cup_of_coffee.JPG" alt="Foto perfil del programador" id="prf-img">
+            <img src="" alt="Foto perfil del programador" id="prf-img">
         </div>
     </div>
-    <div class="header_content"> <!-- Contenido principal del encabezado -->
+    <div class="header_content">
         <h1 class="header_content__title">Mucho gusto, soy Angel...</h1>
         <span class="header_content__title_plate">Programador / Desarrollador Front-End</span>
         <p class="header_content__txt_vignets">
@@ -33,13 +38,11 @@
             <button id='0' class="header_content__stage_dotts__dott"></button>
         </ul>
     </div>
-    <!-- Sección de skills principales -->
     <h1 class="discovering_zone_title">Descubre mis trabajos</h1>
     <div class=".photo_container">
-      <img id="projects-discover-photo" src="./../mockups-modules/fonts/tree-svg.svg" alt="Chica parada frente a una montaña">
+      <img id="projects-discover-photo" src="./../mockups-modules/svg/tree-svg.svg" alt="Chica parada frente a una montaña">
     </div>
-    <ul class="stack_panel">
-        <li class="stack_panel__tech" id="general-programming"><i class="fa-solid fa-code"></i></li>
+    <ul class="stack_panel floating">
         <li class="stack_panel__tech" id="html-5"><i class="fa-brands fa-html5"></i></li>
         <li class="stack_panel__tech" id="css-3"><i class="fa-brands fa-css3-alt"></i></li>
         <li class="stack_panel__tech" id="js-ecma"><i class="fa-brands fa-js"></i></li>
@@ -49,9 +52,9 @@
         <li class="stack_panel__tech" id="dart-sass"><i class="fa-brands fa-sass"></i></li>
         <li class="stack_panel__tech" id="react-js"><i class="fa-brands fa-react"></i></li>
     </ul>
-    <div class="fav_project_presentation"> <!-- Presentación de mi mejor proyecto -->
+    <div class="fav_project_presentation">
         <h1 class="fav_project_presentation__header">Te presento uno de mis favoritos</h1>
-        <div class="fav_project_presentation__container">
+        <div class="fav_project_presentation__container floating">
             <img src="" alt="" class="container__photo">
             <div class="project_data">
                 <h1 class="project_data__name"></h1>
@@ -72,7 +75,7 @@
       que pueda ayudarte a convertir en realidad, estaré encantado, yo estaré por ahí tomandome un café mientras sigo mejorando. 
       Te veo en el proyecto.
     </p>
-    <div class="background">
+    <div class="background floating">
         <div class="container">
           <div class="screen">
             <div class="screen-header">
@@ -95,22 +98,23 @@
                 <div class="app-contact">Correo Personal:</div>
               </div>
               <div class="screen-body-item">
-                <form class="app-form">
+                <form class="app-form" action="https://formsubmit.co/7948793ab3e8b6a4cfa8136bddb9fc30" method="POST" id="contact-form">
                   <div class="app-form-group">
-                    <input class="app-form-control" placeholder="Nombre/Organización">
+                    <input class="app-form-control" placeholder="Nombre/Organización" type="text" name="Nombre/Organización" id="org-name">
                   </div>
                   <div class="app-form-group">
-                    <input class="app-form-control" placeholder="Correo de Contacto">
+                    <input class="app-form-control" placeholder="Correo de Contacto" type="email" name="Correo de Contacto" id="org-email">
                   </div>
                   <div class="app-form-group">
-                    <input class="app-form-control" placeholder="Numero de Contacto">
+                    <input class="app-form-control" placeholder="Numero de Contacto" type="number" name="Número de Contacto" id="org-number">
                   </div>
                   <div class="app-form-group message">
-                    <input class="app-form-control" placeholder="Mensaje">
+                    <input class="app-form-control" placeholder="Mensaje" type="text" name="Mensaje" id="org-message">
                   </div>
                   <div class="app-form-group buttons">
                     <button type="submit" class="app-form-button">ENVIAR</button>
                   </div>
+                  </form>
                 </div>
               </div>
             </div>
@@ -118,11 +122,11 @@
         </div>
       </div>
     <footer class="homepage_footer">
-      <p class="homepage_footer__legend">Hecho con mucho amor y codigo por Angel Leonardo.</p>
+      <p class="homepage_footer__legend">Hecho con mucho amor y codigo por Angel Leonardo. 🤍</p>
       <section class="contact_links">
-        <a href="" class="contact_links__site"><i class="contact_icon fa-brands fa-instagram"></i></a>
-        <a href="" class="contact_links__site"><i class="contact_icon fa-brands fa-github"></i></a>
-        <a href="" class="contact_links__site"><i class="contact_icon fa-brands fa-linkedin"></i></a>
+        <a href="https://www.instagram.com/angellvsdev/?next=%2F" target="_blank" class="contact_links__site"><i class="contact_icon fa-brands fa-instagram"></i></a>
+        <a href="https://github.com/angellvsdev" target="_blank" class="contact_links__site"><i class="contact_icon fa-brands fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/angel-vera-068549289/" target="_blank" class="contact_links__site"><i class="contact_icon fa-brands fa-linkedin"></i></a>
       </section>
     </footer>
     <script type="module" src="./../pages-logic/app.js"></script>

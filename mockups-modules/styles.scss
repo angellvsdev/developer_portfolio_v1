@@ -10,7 +10,6 @@ body {
     overflow-x: hidden;
 }
 
-/* Menu principal de navegación */
 .landing_menu {
     align-items: center;
     background: $brown;
@@ -22,21 +21,26 @@ body {
     justify-content: space-around;
     margin: 16px auto;
     position: absolute;
+    left: 50%;
+    right: 50%;
     width: 12.5rem;
+    transition: background-color .1s .1s ease-out;
+
+    &:hover {
+      background: $forest-green;
+    }
     
-        &__option {
-             background: none;
-             border: none;
-             font-size: 1.2rem;
-             
-             & a {
-              color: $new-white;
-          }
-         }
+    &__option {
+      background: none;
+      border: none;
+      font-size: 1.2rem;
+      & a {
+        color: $new-white;
+      }
+    }
     @include centryElementHorizontally
 }
 
-/* Encabezado principal */
 .home_header {
     align-items: center;
     background: linear-gradient(45deg, $pale-forest-green, $brighter-forest-green, $forest-green);
@@ -58,6 +62,8 @@ body {
 #prf-img {
     height: 100%;
     width: 100%;
+    object-fit: cover;
+    object-position: 50% 20%;
 }
 
 .header_content {
@@ -115,26 +121,22 @@ body {
     }
 }
 
-.dott-active {
-  background: $brown;
-}
-
-/* Encabezado de la presentación de mis proyectos y stack de tecnologías. */
 .discovering_zone_title {
     font-family: $titles;
     font-size: $titles-size;
     text-align: center;
 }
 
-/* Elementos de nube para el encabezado */
 .discovering_zone_title::before {
     background: $brighter-forest-green;
     clip-path: polygon(50% 100%, 0% 47%, 0 20%, 15% 0, 35% 0, 50% 15%, 65% 0, 85% 0, 100% 20%, 100% 47%);
     content: '';
     display: block;
     height: 3.5rem;
-    transform: translateX(5vw);
     width: 3.5rem;
+    position: absolute;
+    left: 5vw;
+    animation: floating 3s infinite ease-in-out;
 }
 
 .discovering_zone_title::after {
@@ -143,8 +145,10 @@ body {
     content: '';
     display: block;
     height: 3.5rem;
-    transform:translateX(calc(95vw - 3.5rem));
     width: 3.5rem;
+    position: absolute;
+    left: 85vw;
+    animation: floating 3s infinite ease-in-out;
 }
 
 #projects-discover-photo {
@@ -154,9 +158,6 @@ body {
     width: 97vw;
 }
 
-/* Responsive GRID para presentar mi stack de tecnologías dominadas y en aprendizaje */
-    
-/* Contenedor GRID */
 .stack_panel {
     background: $new-white;
     border-radius: $main-border;
@@ -189,9 +190,6 @@ body {
     }
 }
 
-/* Flex-container para representar mi mejor proyecto como programador */
-
-/* Contenedor padre */
 .fav_project_presentation {
     display: flex;
     flex-flow: column wrap;
@@ -274,6 +272,11 @@ body {
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
+    transition: background-color .1s .1s ease-out;
+
+    &:hover {
+      background: $forest-green;
+    }
 }
 
 .project_data__used_tech_stack {
@@ -426,17 +429,6 @@ body {
   position: relative;
 }
 
-/*.app-title:after {
-  background: $brown;
-  bottom: -10px;
-  content: '';
-  display: block;
-  height: 4px;
-  left: 0;
-  position: absolute;
-  width: 25px;
-}*/
-
 .app-contact {
   color: $forest-green;
   font-size: .7rem;
@@ -530,7 +522,6 @@ body {
 }
 }
 
-/*Footer de la página */
 .homepage_footer {
     align-items: center;
     background: linear-gradient(45deg, $pale-forest-green, $brighter-forest-green, $forest-green);
@@ -556,11 +547,26 @@ body {
   &__site {
     color: $new-white;
     padding: 0.9rem;
+    transition: background-color .1s .1s ease-out;
+
+    &:hover {
+    background: $brown;
+    }
   }
 }
 
-// Queries
-// Tablets
+.floating { 
+  animation-name: floating;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes floating {
+  0% { transform: translate(0,  0px); }
+  50%  { transform: translate(0, 15px); }
+  100%   { transform: translate(0, -0px); }   
+}
 
 @media screen and (min-width: 780px) {
   html:root {

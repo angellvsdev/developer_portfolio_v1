@@ -1,23 +1,9 @@
-@charset "UTF-8";
 /* Fuentes */
 /* Paleta de colores principal */
 /* Gradientes */
-/* Paleta de colores complementarios */
+/* Complementarios */
 /* Bordes */
 /* Sombras */
-/* Instalación de fuentes personalizadas */
-@font-face {
-  font-family: "modern-aristocrat";
-  src: url("./fonts/modern_aristocrat-webfont.woff2") format("woff2"), url("./fonts/modern_aristocrat-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: "made-tommy";
-  src: url("./fonts/made_tommy_regular_outline_personal_use-webfont.woff2") format("woff2"), url("./fonts/made_tommy_regular_outline_personal_use-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
 html:root {
   font-size: 16px;
 }
@@ -27,7 +13,6 @@ body {
   overflow-x: hidden;
 }
 
-/* Menu principal de navegación */
 .landing_menu {
   align-items: center;
   background: #110800;
@@ -39,10 +24,16 @@ body {
   justify-content: space-around;
   margin: 16px auto;
   position: absolute;
+  left: 50%;
+  right: 50%;
   width: 12.5rem;
+  transition: background-color 0.1s 0.1s ease-out;
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
+}
+.landing_menu:hover {
+  background: #5A7302;
 }
 .landing_menu__option {
   background: none;
@@ -53,7 +44,6 @@ body {
   color: #F2F2F2;
 }
 
-/* Encabezado principal */
 .home_header {
   align-items: center;
   background: linear-gradient(45deg, #93A603, #A9BF04, #5A7302);
@@ -75,6 +65,10 @@ body {
 #prf-img {
   height: 100%;
   width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 50% 20%;
+     object-position: 50% 20%;
 }
 
 .header_content {
@@ -128,18 +122,12 @@ body {
   background-color: #110800;
 }
 
-.dott-active {
-  background: #110800;
-}
-
-/* Encabezado de la presentación de mis proyectos y stack de tecnologías. */
 .discovering_zone_title {
   font-family: "Raleway", "Arial";
   font-size: 1.85rem;
   text-align: center;
 }
 
-/* Elementos de nube para el encabezado */
 .discovering_zone_title::before {
   background: #A9BF04;
   -webkit-clip-path: polygon(50% 100%, 0% 47%, 0 20%, 15% 0, 35% 0, 50% 15%, 65% 0, 85% 0, 100% 20%, 100% 47%);
@@ -147,8 +135,10 @@ body {
   content: "";
   display: block;
   height: 3.5rem;
-  transform: translateX(5vw);
   width: 3.5rem;
+  position: absolute;
+  left: 5vw;
+  animation: floating 3s infinite ease-in-out;
 }
 
 .discovering_zone_title::after {
@@ -158,8 +148,10 @@ body {
   content: "";
   display: block;
   height: 3.5rem;
-  transform: translateX(calc(95vw - 3.5rem));
   width: 3.5rem;
+  position: absolute;
+  left: 85vw;
+  animation: floating 3s infinite ease-in-out;
 }
 
 #projects-discover-photo {
@@ -169,8 +161,6 @@ body {
   width: 97vw;
 }
 
-/* Responsive GRID para presentar mi stack de tecnologías dominadas y en aprendizaje */
-/* Contenedor GRID */
 .stack_panel {
   background: #F2F2F2;
   border-radius: 10px;
@@ -201,8 +191,6 @@ body {
   justify-content: center;
 }
 
-/* Flex-container para representar mi mejor proyecto como programador */
-/* Contenedor padre */
 .fav_project_presentation {
   display: flex;
   flex-flow: column wrap;
@@ -286,6 +274,10 @@ body {
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
+  transition: background-color 0.1s 0.1s ease-out;
+}
+.project_data__view_more_opt:hover {
+  background: #5A7302;
 }
 
 .project_data__used_tech_stack {
@@ -437,16 +429,6 @@ body {
   position: relative;
 }
 
-/*.app-title:after {
-  background: $brown;
-  bottom: -10px;
-  content: '';
-  display: block;
-  height: 4px;
-  left: 0;
-  position: absolute;
-  width: 25px;
-}*/
 .app-contact {
   color: #5A7302;
   font-size: 0.7rem;
@@ -537,7 +519,6 @@ body {
     padding: 0;
   }
 }
-/*Footer de la página */
 .homepage_footer {
   align-items: center;
   background: linear-gradient(45deg, #93A603, #A9BF04, #5A7302);
@@ -563,8 +544,30 @@ body {
 .contact_links__site {
   color: #F2F2F2;
   padding: 0.9rem;
+  transition: background-color 0.1s 0.1s ease-out;
+}
+.contact_links__site:hover {
+  background: #110800;
 }
 
+.floating {
+  animation-name: floating;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes floating {
+  0% {
+    transform: translate(0, 0px);
+  }
+  50% {
+    transform: translate(0, 15px);
+  }
+  100% {
+    transform: translate(0, 0px);
+  }
+}
 @media screen and (min-width: 780px) {
   html:root {
     font-size: 18px;
