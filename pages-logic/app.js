@@ -47,7 +47,7 @@ setInterval(() => {
     else {
         intervalIndex = 0
     }
-}, 10000);
+}, 5000);
 
 let stellarProjectContainer = {
     projectFace: document.querySelector(".container__photo"),

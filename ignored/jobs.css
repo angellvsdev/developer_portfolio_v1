@@ -1,0 +1,268 @@
+/* Fuentes */
+/* Paleta de colores principal */
+/* Gradientes */
+/* Complementarios */
+/* Bordes */
+/* Sombras */
+html:root {
+  font-size: 16px;
+}
+
+body {
+  background: #F2F2F2;
+  display: flex;
+  flex-flow: column wrap;
+  min-height: 100vh;
+  min-width: 100vw;
+  overflow-x: hidden;
+  align-items: center;
+}
+
+.landing_menu {
+  align-items: center;
+  background: #110800;
+  border-radius: 10px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: row;
+  height: 2.5rem;
+  justify-content: space-around;
+  margin: 10px auto 10px;
+  width: 12.5rem;
+  transition: background-color 0.1s 0.1s ease-out;
+}
+.landing_menu:hover {
+  background: #5A7302;
+}
+.landing_menu__option {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+}
+.landing_menu__option a {
+  color: #F2F2F2;
+}
+
+.main_menu_container {
+  align-self: center;
+  width: 100%;
+  margin-top: 10px;
+}
+.main_menu_container .pl_menu {
+  background: #110800;
+  border-radius: 10px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  margin-top: 15px;
+  margin: auto;
+  max-width: 11rem;
+  min-height: 2rem;
+  min-width: 6rem;
+  padding-left: 0;
+}
+.main_menu_container .pl_menu_opt {
+  align-items: center;
+  display: flex;
+  flex-basis: 2rem;
+  justify-content: center;
+  min-width: 2rem;
+}
+.main_menu_container .pl_menu_opt .opt_button {
+  background: #FFF;
+  border-radius: 50%;
+  border-style: none;
+  flex-basis: 50%;
+  min-height: 50%;
+  cursor: pointer;
+  transition: background-color 0.2s 0.1s ease-out;
+}
+.main_menu_container .pl_menu_opt .opt_button:hover {
+  background: #A9BF04;
+}
+
+.media_menu_container {
+  align-self: center;
+}
+.media_menu_container .project_media_list {
+  display: flex;
+  height: 1.5rem;
+  justify-content: center;
+  list-style: none;
+  min-width: 10rem;
+  padding: 0;
+}
+.media_menu_container .project_media_list .media_el {
+  height: 100%;
+  margin-top: 0;
+}
+.media_menu_container .project_media_list .media_el__opt_button {
+  background: linear-gradient(45deg, #93A603, #A9BF04, #5A7302);
+  border-radius: 3px;
+  border: 2px solid #FFF;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  height: 100%;
+  margin: 0 2px;
+  min-width: 1.5rem;
+  cursor: pointer;
+  transition: background-color 1s 0.2s ease-out;
+}
+.media_menu_container .project_media_list .media_el__opt_button:hover {
+  background: #A9BF04;
+}
+
+.mv_container {
+  display: flex;
+  height: 45vh;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+.mv_container__img_container {
+  min-height: 80%;
+  width: 85%;
+  transition: opacity 0.5s 0.1s ease-in-out;
+  opacity: 0;
+}
+.mv_container__img_container .footage {
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  width: 100%;
+  filter: drop-shadow(10px 10px 10px rgba(39, 39, 39, 0.934));
+}
+
+.project_specs_container {
+  display: grid;
+  gap: 5px;
+  min-height: 50vh;
+  width: 90vw;
+  color: #F2F2F2;
+  grid-template-areas: "pname pname" "pdesc pdesc" "techstack techstack" "deadline deadline" "pmenu pmenu";
+}
+.project_specs_container > ul {
+  list-style: none;
+  padding-left: 0;
+}
+.project_specs_container > h1 {
+  margin: 0;
+}
+.project_specs_container > * {
+  align-content: center;
+  align-items: center;
+  align-self: center;
+  background: rgb(216, 209, 209);
+  border-radius: 10px;
+  display: flex;
+  height: 95%;
+  justify-content: center;
+  justify-self: center;
+  margin: 5px 5px;
+  width: 97%;
+  text-align: center;
+}
+
+.project_name {
+  background: linear-gradient(45deg, #93A603, #A9BF04, #5A7302);
+  font-family: "Raleway", "Arial";
+  grid-area: pname;
+  padding: 15px;
+}
+
+.project_desc {
+  background: linear-gradient(45deg, #93A603, #A9BF04, #5A7302);
+  font-family: "Raleway", "Arial";
+  font-size: 1rem;
+  grid-area: pdesc;
+  overflow: auto;
+  padding: 10px;
+  text-align: center;
+}
+
+.techs_used {
+  background: linear-gradient(45deg, #93A603, #A9BF04, #5A7302);
+  font-size: 3rem;
+  grid-area: techstack;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 5px;
+}
+.techs_used__tech {
+  margin: 0 10px;
+}
+
+.completion_time {
+  background: linear-gradient(45deg, #93A603, #A9BF04, #5A7302);
+  font-family: "Raleway", "Arial";
+  font-size: 1rem;
+  grid-area: deadline;
+  padding: 10px;
+}
+
+.project_menu {
+  background: linear-gradient(45deg, #93A603, #A9BF04, #5A7302);
+  display: flex;
+  grid-area: pmenu;
+  justify-content: space-around;
+}
+.project_menu__option {
+  align-items: center;
+  background: #110800;
+  border-radius: 10px;
+  color: #F2F2F2;
+  display: flex;
+  flex-grow: 1;
+  font-family: "Raleway", "Arial";
+  font-size: 2rem;
+  height: 4rem;
+  justify-content: center;
+  margin: 0 5px;
+  text-decoration: none;
+  transition: background-color 0.1s 0.1s ease-out;
+}
+.project_menu__option:hover {
+  background: #5A7302;
+}
+
+.img_modal {
+  width: 100vw;
+  height: 100vh;
+  font-size: 1.85rem;
+  font-family: "Raleway", "Arial";
+  color: #110800;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  background: #F2F2F2;
+  position: absolute;
+  left: 0%;
+  justify-content: center;
+  z-index: 10;
+  transform-origin: top;
+  top: 20vh;
+  transition-property: height;
+  transition-duration: 1s;
+  transition-delay: 0.25s;
+  transition-timing-function: ease-in;
+}
+
+@media screen and (min-width: 1280px) {
+  .project_specs_container > * {
+    background: #F2F2F2;
+    color: #110800;
+  }
+  .project_desc {
+    max-width: 80vw;
+  }
+  .main_menu_container {
+    display: flex;
+    flex-flow: column;
+    position: absolute;
+    z-index: 30;
+  }
+  .mv_container {
+    margin-top: 40px;
+    height: 90vh;
+    width: 90vw;
+  }
+}/*# sourceMappingURL=jobs.css.map */
