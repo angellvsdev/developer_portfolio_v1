@@ -1,0 +1,207 @@
+/* Fuentes */
+/* Paleta de colores principal */
+/* Gradientes */
+/* Complementarios */
+/* Bordes */
+/* Sombras */
+html:root {
+  font-size: 10px;
+}
+
+body {
+  display: flex;
+  flex-flow: column nowrap;
+  font-size: 16px;
+}
+
+.landing_menu {
+  align-items: center;
+  background: #110800;
+  border-radius: 10px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: row;
+  height: 4.5rem;
+  justify-content: space-around;
+  margin: 16px auto;
+  position: absolute;
+  width: 18.5rem;
+  transition: background-color 0.1s 0.1s ease-out;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.landing_menu:hover {
+  background: #5A7302;
+}
+.landing_menu__option {
+  background: none;
+  border: none;
+  font-size: 1.7rem;
+}
+.landing_menu__option a {
+  color: #F2F2F2;
+}
+
+.general_profile {
+  background: #F2F2F2;
+  display: flex;
+  justify-content: center;
+  flex-flow: column wrap;
+  min-height: 100vh;
+}
+
+.soft_skills {
+  background: #110800;
+  color: #F2F2F2;
+}
+
+.technical_skills {
+  background: linear-gradient(45deg, #93A603, #A9BF04, #5A7302);
+  color: #110800;
+}
+
+.about_me_adjustment {
+  border-radius: 50%;
+  border: 0.5rem double #F2F2F2;
+  height: 14rem;
+  overflow: hidden;
+  width: 14rem;
+  background: #5A7302;
+  align-self: center;
+  margin-top: 140px;
+}
+
+#prf-img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 50% 15%;
+     object-position: 50% 15%;
+}
+
+.dev {
+  align-self: center;
+}
+
+.dev__name {
+  font-size: 1.85rem;
+  text-align: center;
+  font-family: "Raleway", "Arial";
+}
+
+.dev__plate {
+  text-align: center;
+  font-family: "Raleway", "Arial";
+  font-size: 1.35rem;
+}
+
+.data__dev_description {
+  text-align: center;
+  font-family: "Raleway", "Arial";
+  font-size: 1.5rem;
+  overflow: auto;
+  padding: 20px;
+}
+
+.contact_links {
+  display: flex;
+  padding: 20px;
+  justify-content: center;
+}
+.contact_links__site {
+  color: #110800;
+  padding: 0.9rem;
+  font-size: 3rem;
+  text-align: center;
+  transition: background-color 0.1s 0.1s ease-out;
+}
+.contact_links__site:hover {
+  background: #A9BF04;
+}
+
+.soft_skills, .technical_skills {
+  display: flex;
+  flex-direction: column;
+  font-family: "Raleway", "Arial";
+  font-size: 2.5rem;
+}
+.soft_skills__flag, .technical_skills__flag {
+  align-self: center;
+  text-align: center;
+  padding-top: 15px;
+}
+.soft_skills__flag__legend, .technical_skills__flag__legend {
+  text-align: center;
+  font-size: 2.8rem;
+}
+.soft_skills__flag i, .technical_skills__flag i {
+  padding-top: 30px;
+  font-size: 6rem;
+}
+.soft_skills__legend, .technical_skills__legend {
+  padding: 0 15px 0 15px;
+  font-family: "Raleway", "Arial";
+  font-size: 1.5rem;
+}
+.soft_skills__list, .technical_skills__list {
+  padding-left: 15px;
+  list-style: none;
+  font-family: "Raleway", "Arial";
+  font-size: 1.5rem;
+}
+
+.soft_skills__list {
+  list-style-type: disc;
+  list-style-position: inside;
+}
+
+.floating {
+  animation-name: floating;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes floating {
+  0% {
+    transform: translate(0, 0px);
+  }
+  50% {
+    transform: translate(0, 15px);
+  }
+  100% {
+    transform: translate(0, 0px);
+  }
+}
+@media screen and (min-width: 1280px) {
+  html:root {
+    font-size: 17px;
+  }
+  .general_profile {
+    height: 130vh;
+  }
+  .data__dev_description,
+  .technical_skills__legend, .technical_skills__list,
+  .soft_skills__legend, .soft_skills__list {
+    padding: 0 40px;
+  }
+  .landing_menu {
+    height: 4rem;
+    width: 17.5rem;
+  }
+  .landing_menu__option {
+    font-size: 1.5rem;
+  }
+}
+@media screen and (min-width: 1440px) {
+  html:root {
+    font-size: 19px;
+  }
+}
+@media screen and (min-width: 1920px) {
+  html:root {
+    font-size: 22px;
+  }
+}/*# sourceMappingURL=about-me.css.map */

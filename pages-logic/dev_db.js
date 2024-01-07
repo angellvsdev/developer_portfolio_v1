@@ -7,7 +7,7 @@ export const developerProfile = {
     surnames: "Vera Soto",
     age: 18,
     developerRoles: ["Desarrollador Web / Programador Front-End"],
-    softSkills: ['Paciente', 'Enérgico', 'Analítico', 'Dedicado', 'Disciplinado (casi siempre) 😅', 'Comunicativo', 'Curioso'],
+    softSkills: ['Paciente', 'Enérgico', 'Analítico', 'Dedicado', 'Disciplinado', 'Comunicativo', 'Curioso'],
     technicalSkills: new Map(),
     socialMediaLinks: ['https://www.instagram.com/angellvsdev/?next=%2F', 'https://github.com/angellvsdev', 'https://www.linkedin.com/in/angel-vera-068549289/']
 }
@@ -19,4 +19,3 @@ developerProfile.technicalSkills.set('Terminal / CMD', '<i class="fa-solid fa-te
 developerProfile.technicalSkills.set('Git', '<i class="fa-brands fa-git-alt"></i>')
 developerProfile.technicalSkills.set('GitHub', '<i class="fa-brands fa-github"></i>')
 developerProfile.technicalSkills.set('SASS', '<i class="fa-brands fa-sass"></i>')
-developerProfile.technicalSkills.set('React JS', '<i class="fa-brands fa-react"></i>')

@@ -1,0 +1,294 @@
+@import '_variables.scss', '_funcs-and-components.scss';
+
+html:root {
+    font-size: 16px;
+}
+
+body {
+    background: $new-white;
+    display: flex;
+    flex-flow: column wrap;
+    min-height: 100vh;
+    min-width: 100vw;
+    overflow-x: hidden;
+    align-items: center;
+}
+
+
+.landing_menu {
+    align-items: center;
+    background: $brown;
+    border-radius: $main-border;
+    box-shadow: $main-shadow;
+    display: flex;
+    flex-direction: row;
+    height: 2.5rem;
+    justify-content: space-around;
+    margin: 10px auto 10px;
+    width: 12.5rem;
+    transition: background-color .1s .1s ease-out;
+
+    &:hover {
+      background: $forest-green;
+    }
+    
+        &__option {
+             background: none;
+             border: none;
+             font-size: 1.2rem;
+             
+             & a {
+              color: $new-white;
+          }
+         }
+}
+
+.main_menu_container {
+    align-self: center;
+    width: 100%;
+    margin-top: 10px;
+    
+    .pl_menu {
+        background: $brown;
+        border-radius: $main-border;
+        box-shadow: $main-shadow;
+        display: flex;
+        justify-content: space-around;
+        list-style: none;
+        margin-top: 15px;
+        margin: auto;
+        max-width: 11rem;
+        min-height: 2rem;
+        min-width: 6rem;
+        padding-left: 0;
+        
+        &_opt {
+            align-items: center;
+            display: flex;
+            flex-basis: 2rem;
+            justify-content: center;
+            min-width: 2rem;
+            
+            .opt_button {
+                background: #FFF;
+                border-radius: 50%;
+                border-style: none;
+                flex-basis: 50%;
+                min-height: 50%;
+                cursor: pointer;
+                transition: background-color .2s .1s ease-out;
+
+                &:hover {
+                    background: $brighter-forest-green;
+                }
+            }
+        }
+    }
+}
+
+.media_menu_container {
+    align-self: center;
+    
+
+    .project_media_list {
+        display: flex;
+        height: 1.5rem;
+        justify-content: center;
+        list-style: none;
+        min-width: 10rem;
+        padding: 0;
+        
+        .media_el {
+            height: 100%;
+            margin-top: 0;
+            
+            &__opt_button {
+                background: $green-gradient;
+                border-radius: 3px;
+                border: 2px solid #FFF;
+                box-shadow: $main-shadow;
+                height: 100%;
+                margin: 0 2px;
+                min-width: 1.5rem;
+                cursor: pointer;
+                transition: background-color 1s .2s ease-out;
+
+                &:hover {
+                    background: $brighter-forest-green;
+                }
+            }
+        }
+    }
+}
+
+.mv_container {
+    display: flex;
+    height: 45vh;
+    justify-content: center;
+    margin-bottom: 50px;
+    
+    
+    &__img_container {
+        min-height: 80%;
+        width: 85%;
+        transition: opacity .5s .1s ease-in-out;
+        opacity: 0;
+
+        .footage {
+            height: 100%;
+            object-fit: contain;
+            width: 100%;
+            filter: drop-shadow(10px 10px 10px rgba(39, 39, 39, 0.934));
+        }
+    }
+}
+
+.project_specs_container {
+    display: grid;
+    gap: 5px;
+    min-height: 50vh;
+    width: 90vw;
+    color: $new-white;
+    
+    grid-template-areas: 
+     "pname pname"
+     "pdesc pdesc" 
+     "techstack techstack" 
+     "deadline deadline" 
+     "pmenu pmenu" 
+    ;
+    & > ul {
+        list-style: none;
+        padding-left: 0;
+    }
+
+    & > h1 {
+        margin: 0;
+    }
+
+    & > * {
+        align-content: center;
+        align-items: center;
+        align-self: center;
+        background: rgb(216, 209, 209);
+        border-radius: $main-border;
+        display: flex;
+        height: 95%;
+        justify-content: center;
+        justify-self: center;
+        margin: 5px 5px;
+        width: 97%;
+        text-align: center;
+    }
+}
+
+.project_name {
+    background: $green-gradient;
+    font-family: $descriptions;
+    grid-area: pname;
+    padding: 15px;
+}
+
+.project_desc {
+    background: $green-gradient;
+    font-family: $descriptions;
+    font-size: 1rem;
+    grid-area: pdesc;
+    overflow: auto;
+    padding: 10px;
+    text-align: center;
+}
+
+.techs_used {
+    background: $green-gradient;
+    font-size: 3rem;
+    grid-area: techstack;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 5px;
+
+    &__tech {
+        margin: 0 10px;
+    }
+}
+
+.completion_time {
+    background: $green-gradient;
+    font-family: $descriptions;
+    font-size: 1rem;
+    grid-area: deadline;
+    padding: 10px;
+}
+
+.project_menu {
+    background: $green-gradient;
+    display: flex;
+    grid-area: pmenu;
+    justify-content: space-around;
+    
+    &__option {
+        align-items: center;
+        background: $brown;
+        border-radius: $main-border;
+        color: $new-white;
+        display: flex;
+        flex-grow: 1;
+        font-family: $descriptions;
+        font-size: 2rem;
+        height: 4rem;
+        justify-content: center;
+        margin: 0 5px;
+        text-decoration: none;
+        transition: background-color .1s .1s ease-out;
+
+        &:hover {
+            background: $forest-green;
+        }
+    }
+}
+
+.img_modal {
+    width: 100vw;
+    height: 100vh;
+    font-size: $titles-size;
+    font-family: $titles;
+    color: $brown;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    background: $new-white;
+    position: absolute;
+    left: 0%;
+    justify-content: center;
+    z-index: 10;
+    transform-origin: top;
+    top: 20vh;
+    transition-property: height;
+    transition-duration: 1s;
+    transition-delay: 0.25s;
+    transition-timing-function: ease-in;
+}
+
+@media screen and (min-width: 1280px) {
+    .project_specs_container > * {
+        background: $new-white;
+        color: $brown;
+    }
+
+    .project_desc {
+        max-width: 80vw;
+    }
+
+    .main_menu_container {
+        display: flex;
+        flex-flow: column;
+        position: absolute;
+        z-index: 30;
+    }
+
+    .mv_container {
+        margin-top: 40px;
+        height: 90vh;
+        width: 90vw;
+    }
+}
