@@ -627,4 +627,63 @@ body {
   .contact_section_title {
     font-size: 2.22rem;
   }
-}/*# sourceMappingURL=styles.css.map */
+}
+
+.projects_zone {
+  display: flex;
+  justify-content: center; /* Para varios proyectos, descentralizar */
+  height: 60vh;
+  width: 100vw;
+  padding: 10px;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.project_modal {
+  width: 15rem;
+  max-width: 17rem;
+  height: 95%;
+  border-radius: 10px;
+  animation: floating 3s infinite ease-in-out;
+  border: 2px dashed #110800;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 10px;
+  font-family: "Raleway", "Arial";
+  margin: 10px;
+}
+
+.modal_title {
+  font-size: 1.5rem;
+  background: #A9BF04;
+  width: 90%;
+  border-radius: 10px;
+  text-align: center;
+  color: #e2e2e2;
+}
+
+.modal_github {
+  padding: 10px;
+  background: #110800;
+  width: 90%;
+  border-radius: 10px;
+  color: #e2e2e2;
+  display: flex;
+  flex-flow: column;
+  align-content: center;
+  text-align: center;
+}
+
+.modal_github i {
+  font-size: 1rem;
+}
+
+.modal_github > a {
+  color: #e2e2e2;
+  width: 100%;
+  font-size: 1rem;
+}
+
+/*# sourceMappingURL=styles.css.map */

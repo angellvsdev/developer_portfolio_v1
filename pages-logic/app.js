@@ -6,7 +6,7 @@ let introductionExplanations = [
     "Mis intereses como programador es encaminarme a ser un Ingeniero de Software en algún futuro, y mi objetivo actual; convertirme en un Desarrollador FullStack. También siento un gran interés por el Cloud Computing, la Ciberseguridad y la Electrónica, por lo que en algún futuro espero muy cercano, me veo trabajando en estos campos.",
     "Actualmente me encuentro cursando la carrera de Ingeniería de Sistemas en el Instituto Universitario Politécnico Santiago Mariño, también, estoy aprendiendo React JS y TypeScript a profundidad para seguirme perfeccionando como un Desarrollador Front-End, más allá de lo típico y de las tendencias actuales, busco y trabajo también por entender la raíz de todo, y poder ser una parte activa de la comunidad. Mi misión es jamás dejar de aprender, y siempre mejorar, por encima de todo.",
     "Personalmente, veo el conocimiento y la experiencia como las raíces de un arbol (ya, de ahí que este portafolio parezca página de farmaceutica 🗿) y los frutos, como aquello que creamos a partir de ello. La idea de ser un arbol torcido no me gusta.",
-    "Estaré publicando proyectos que demuestren que soy capaz de hacer muy próximamente, entonces bien, te invito cordialmente a que descubras que frutos salen del arbol que llevo un tiempo sembrando, mira y toca lo que quieras y mira más de mí si lo deseas en mi sección 'Sobre Mí'. Un saludo, te veo en el proyecto."
+    "Cada que es necesario, publico lo que soy capaz de hacer, entonces bien, te invito cordialmente a que descubras que frutos salen del arbol que llevo un tiempo sembrando, mira y toca lo que quieras y mira más de mí si lo deseas en mi sección 'Sobre Mí'. Un saludo, te veo en el proyecto."
 ],
     explainationContainer = document.querySelector('.header_content__txt_vignets'),
     explainationSelectionMenu = document.querySelector('.header_content__stage_dotts'),
@@ -47,7 +47,7 @@ setInterval(() => {
     else {
         intervalIndex = 0
     }
-}, 5000);
+}, 7500);
 
 let stellarProjectContainer = {
     projectFace: document.querySelector(".container__photo"),
