@@ -122,6 +122,10 @@ body {
   background-color: #110800;
 }
 
+.header_content__stage_dotts__dott:hover {
+  cursor: pointer;
+}
+
 .discovering_zone_title {
   font-family: "Raleway", "Arial";
   font-size: 1.85rem;
