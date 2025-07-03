@@ -15,6 +15,7 @@ export const developerProfile = {
 developerProfile.technicalSkills.set('HTML', '<i class="fa-brands fa-html5"></i>')
 developerProfile.technicalSkills.set('CSS', '<i class="fa-brands fa-css3-alt"></i>')
 developerProfile.technicalSkills.set('JavaScript', '<i class="fa-brands fa-js"></i>')
+developerProfile.technicalSkills.set('TypeScript', '<i class="fa-brands fa-js"></i>')
 developerProfile.technicalSkills.set('Terminal / CMD', '<i class="fa-solid fa-terminal"></i>')
 developerProfile.technicalSkills.set('Git', '<i class="fa-brands fa-git-alt"></i>')
 developerProfile.technicalSkills.set('GitHub', '<i class="fa-brands fa-github"></i>')
