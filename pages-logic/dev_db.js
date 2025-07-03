@@ -19,3 +19,6 @@ developerProfile.technicalSkills.set('Terminal / CMD', '<i class="fa-solid fa-te
 developerProfile.technicalSkills.set('Git', '<i class="fa-brands fa-git-alt"></i>')
 developerProfile.technicalSkills.set('GitHub', '<i class="fa-brands fa-github"></i>')
 developerProfile.technicalSkills.set('SASS', '<i class="fa-brands fa-sass"></i>')
+developerProfile.technicalSkills.set('React JS', '<i class="fa-brands fa-react"></i>')
+developerProfile.technicalSkills.set('Next JS', '<i class="fa-brands fa-react"></i>')
+developerProfile.technicalSkills.set('Tailwind CSS', '<i class="fa-brands fa-css3"></i>')
